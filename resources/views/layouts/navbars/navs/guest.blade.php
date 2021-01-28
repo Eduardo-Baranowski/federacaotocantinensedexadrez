@@ -18,7 +18,7 @@
         <div class="collapse navbar-collapse" id="navigation">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a href="{{ route('home') }}" class="nav-link text-primary">
+                    <a href="{{ route('dashboard') }}" class="nav-link text-primary">
                         <i class="tim-icons icon-minimal-left"></i> {{ __('Informações e Eventos') }}
                     </a>
                 </li>
