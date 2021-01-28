@@ -13,7 +13,7 @@
             </li>
             <li class="nav-item">
                 <a href="#" class="nav-link">
-                    {{ __('About Us') }}
+                    {{ __('Sobre') }}
                 </a>
             </li>
             <li class="nav-item">
@@ -23,7 +23,7 @@
             </li>
         </ul>
         <div class="copyright">
-            &copy; {{ now()->year }} {{ __('Produzido pela ') }} <i class="tim-icons icon-heart-2"></i>
+            &copy; {{ now()->year }} {{ __('Produzido pela ') }} <i class="tim-icons icon-trophy"></i>
             <a href="" target="">{{ __('Federação Tocantinense de Xadrez') }}</a>
         </div>
     </div>
