@@ -32,6 +32,11 @@
                         <i class="tim-icons icon-single-02"></i> {{ __('Login') }}
                     </a>
                 </li>
+                <li class="nav-item ">
+                    <a href="{{ route('diretoria') }}" class="nav-link">
+                        <i class="tim-icons icon-components"></i> {{ __('Diretoria') }}
+                    </a>
+                </li>
             </ul>
         </div>
     </div>
