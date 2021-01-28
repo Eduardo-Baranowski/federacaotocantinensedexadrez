@@ -37,6 +37,11 @@
                         <i class="tim-icons icon-components"></i> {{ __('Diretoria') }}
                     </a>
                 </li>
+                <li class="nav-item ">
+                    <a href="{{ route('contato') }}" class="nav-link">
+                        <i class="tim-icons icon-email-85"></i> {{ __('Contato') }}
+                    </a>
+                </li>
             </ul>
         </div>
     </div>

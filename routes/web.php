@@ -1,5 +1,7 @@
 <?php
 
+use App\Mail\ContactMail;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -29,12 +31,22 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');;
 
+#Route::get('/contact', function () {
+#    return view('contact');
+#})->name('contact');;
+
+Route::get('/contato', function () {
+    return view('contato');
+})->name('contato');;
+
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Auth::routes();
 
+#Route::post('/contato', 'HomeController@postContact')->name('contact.send');
+Route::post('/contato', 'App\Http\Controllers\HomeController@postContact')->name('contato.send');
 Route::get('/home', 'App\Http\Controllers\HomeController@index')->name('home')->middleware('auth');
 
 Route::group(['middleware' => 'auth'], function () {
