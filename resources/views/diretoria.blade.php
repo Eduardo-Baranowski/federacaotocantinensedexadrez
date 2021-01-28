@@ -20,7 +20,7 @@
             </div>
             <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
               <div class="font-icon-detail">
-                <i class="tim-icons icon-align-center"></i>
+                  <img class="featurette-image img-fluid mx-auto" src="{{ asset('black') }}/img/default-avatar.png"  width="100" height="100"  alt="Generic placeholder image">
                 <p>Vice: Luciano </p>
               </div>
             </div>
@@ -32,7 +32,7 @@
             </div>
             <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
               <div class="font-icon-detail">
-                <i class="tim-icons icon-app"></i>
+                  <img class="featurette-image img-fluid mx-auto" src="{{ asset('black') }}/img/default-avatar.png"  width="100" height="100"  alt="Generic placeholder image">
                 <p>Diretor Tesoureiro e Patrimônio: Euzamar </p>
               </div>
             </div>
@@ -44,50 +44,50 @@
             </div>
             <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
               <div class="font-icon-detail">
-                <i class="tim-icons icon-attach-87"></i>
+                  <img class="featurette-image img-fluid mx-auto" src="{{ asset('black') }}/img/default-avatar.png"  width="100" height="100"  alt="Generic placeholder image">
                 <p>Diretor de Arbitragem: Washington Gabriel </p>
               </div>
             </div>
             <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
               <div class="font-icon-detail">
-                <i class="tim-icons icon-badge"></i>
+                  <img class="featurette-image img-fluid mx-auto" src="{{ asset('black') }}/img/default-avatar.png"  width="100" height="100"  alt="Generic placeholder image">
                 <p>Diretor Médico: Antônio Pons</p>
               </div>
             </div>
             <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
               <div class="font-icon-detail">
-                <i class="tim-icons icon-bag-16"></i>
-                <p>Conselho Fiscal: Eiberto Nascimento</p>
+                  <img class="featurette-image img-fluid mx-auto" src="{{ asset('black') }}/img/default-avatar.png"  width="100" height="100"  alt="Generic placeholder image">
+                <p>Conselheiro Fiscal: Eiberto Nascimento</p>
               </div>
             </div>
             <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
               <div class="font-icon-detail">
                   <img class="featurette-image img-fluid mx-auto" src="{{ asset('black') }}/img/rangel.jpeg"  width="100" height="100"  alt="Generic placeholder image">
-                <p>Conselho Fiscal: Rangel Cavalcante</p>
+                <p>Conselheiro Fiscal: Rangel Cavalcante</p>
               </div>
             </div>
             <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
               <div class="font-icon-detail">
-                <i class="tim-icons icon-basket-simple"></i>
-                <p>Conselho Fiscal: Jailson Sousa</p>
+                  <img class="featurette-image img-fluid mx-auto" src="{{ asset('black') }}/img/default-avatar.png"  width="100" height="100"  alt="Generic placeholder image">
+                <p>Conselheiro Fiscal: Jailson Sousa</p>
               </div>
             </div>
             <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
               <div class="font-icon-detail">
-                <i class="tim-icons icon-bell-55"></i>
-                <p>Conselho Fiscal: Gilson Oliveira</p>
+                  <img class="featurette-image img-fluid mx-auto" src="{{ asset('black') }}/img/default-avatar.png"  width="100" height="100"  alt="Generic placeholder image">
+                <p>Conselheiro Fiscal: Gilson Oliveira</p>
               </div>
             </div>
             <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
               <div class="font-icon-detail">
-                <i class="tim-icons icon-bold"></i>
-                <p>Conselho Fiscal: Adinan Souza</p>
+                  <img class="featurette-image img-fluid mx-auto" src="{{ asset('black') }}/img/default-avatar.png"  width="100" height="100"  alt="Generic placeholder image">
+                <p>Conselheiro Fiscal: Adinan Souza</p>
               </div>
             </div>
             <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
               <div class="font-icon-detail">
-                <i class="tim-icons icon-book-bookmark"></i>
-                <p>Conselho Fiscal: Filipe Carvalho</p>
+                  <img class="featurette-image img-fluid mx-auto" src="{{ asset('black') }}/img/default-avatar.png"  width="100" height="100"  alt="Generic placeholder image">
+                <p>Conselheiro Fiscal: Filipe Carvalho</p>
               </div>
             </div>
 
