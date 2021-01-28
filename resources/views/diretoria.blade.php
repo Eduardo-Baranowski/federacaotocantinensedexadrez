@@ -50,7 +50,7 @@
             </div>
             <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
               <div class="font-icon-detail">
-                  <img class="featurette-image img-fluid mx-auto" src="{{ asset('black') }}/img/default-avatar.png"  width="100" height="100"  alt="Generic placeholder image">
+                  <img class="featurette-image img-fluid mx-auto" src="{{ asset('black') }}/img/pons.jpeg"  width="100" height="100"  alt="Generic placeholder image">
                 <p>Diretor Médico: Antônio Pons</p>
               </div>
             </div>
