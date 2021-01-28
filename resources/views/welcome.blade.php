@@ -6,9 +6,9 @@
             <div class="header-body text-center mb-7">
                 <div class="row justify-content-center">
                     <div class="col-lg-5 col-md-6">
-                        <h1 class="text-white">{{ __('Painel Forex') }}</h1>
+                        <h1 class="text-white">{{ __('Federação Tocantinense de Xadrez') }}</h1>
                         <p class="text-lead text-light">
-                            {{ __('Use esta ferramenta para verificar tendências de mercado.') }}
+                            {{ __('Site da Federação Tocantinense de Xadrez - FTX.') }}
                         </p>
                     </div>
                 </div>
