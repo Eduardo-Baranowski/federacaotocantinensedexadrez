@@ -5,7 +5,7 @@
         <div class="col-md-12">
             <div class="card card-plain">
                 <div class="card-header">
-                    Google Maps
+                    Localização da FTX
                 </div>
                     <div class="card-body">
                         <div id="map" class="map"></div>
