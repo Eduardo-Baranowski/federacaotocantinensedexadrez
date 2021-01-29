@@ -20,10 +20,10 @@
                                 @include('alerts.feedback', ['field' => 'name'])
                             </div>
 
-                            <div class="form-group{{ $errors->has('email') ? ' has-danger' : '' }}">
+                            <div class="form-group{{ $errors->has('emails') ? ' has-danger' : '' }}">
                                 <label>{{ __('Email address') }}</label>
-                                <input type="email" name="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" placeholder="{{ __('Email address') }}" value="{{ old('email', auth()->user()->email) }}">
-                                @include('alerts.feedback', ['field' => 'email'])
+                                <input type="email" name="email" class="form-control{{ $errors->has('emails') ? ' is-invalid' : '' }}" placeholder="{{ __('Email address') }}" value="{{ old('emails', auth()->user()->email) }}">
+                                @include('alerts.feedback', ['field' => 'emails'])
                             </div>
                     </div>
                     <div class="card-footer">

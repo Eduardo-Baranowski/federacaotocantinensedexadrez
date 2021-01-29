@@ -38,7 +38,7 @@
                     </a>
                 </li>
                 <li class="nav-item ">
-                    <a href="{{ route('contato') }}" class="nav-link">
+                    <a href="{{ route('contact') }}" class="nav-link">
                         <i class="tim-icons icon-email-85"></i> {{ __('Contato') }}
                     </a>
                 </li>

@@ -116,6 +116,8 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/facade/ignition" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/monolog/monolog" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/phpspec/prophecy" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/wildbit/swiftmailer-postmark" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/phpmailer/phpmailer" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

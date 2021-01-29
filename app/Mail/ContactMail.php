@@ -3,12 +3,10 @@
 namespace App\Mail;
 
 use App\User;
-use Faker\Provider\ar_JO\Address;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
-use stdClass;
 
 class ContactMail extends Mailable
 {

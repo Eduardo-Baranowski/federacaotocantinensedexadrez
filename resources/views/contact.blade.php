@@ -1,35 +1,91 @@
 @extends('layouts.app', ['pageSlug' => 'contact'])
-
 @section('content')
-<div class="jumbotron">
-<div class="container text-center">
+    <div class="row">
+        <div class="col-md-5 ml-auto">
+            <div class="info-area info-horizontal mt-5">
+                <div class="icon icon-warning">
+                    <i class="tim-icons icon-wifi"></i>
+                </div>
+                <div class="description">
+                    <h3 class="info-title">{{ __('Marketing') }}</h3>
+                    <p class="description">
+                        {{ __('Deseja organizar eventos, torneios e cursos ? Entre em contato conosco.') }}
+                    </p>
+                </div>
+            </div>
+            <div class="info-area info-horizontal">
+                <div class="icon icon-primary">
+                    <i class="tim-icons icon-triangle-right-17"></i>
+                </div>
+                <div class="description">
+                    <h3 class="info-title">{{ __('Simultêas, xadrez as cegas e ressolução de problemas') }}</h3>
+                    <p class="description">
+                        {{ __('Organizamos eventos com parcerias e de cunho próprio envolvendo diversas modalidades do xadrez.') }}
+                    </p>
+                </div>
+            </div>
+            <div class="info-area info-horizontal">
+                <div class="icon icon-info">
+                    <i class="tim-icons icon-trophy"></i>
+                </div>
+                <div class="description">
+                    <h3 class="info-title">{{ __('Torneios') }}</h3>
+                    <p class="description">
+                        {{ __('Organizamos torneios online e presenciais com arbitragem diplomada pelos órgãos competentes.') }}
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-7 mr-auto">
+            <div class="card card-register card-white">
+                <div class="card-header">
+                    <img class="card-img" src="{{ asset('black') }}/img/card-primary.png" alt="Card image">
+                    <h4 class="card-title">{{ __('Contato') }}</h4>
+                </div>
+                <form action="{{route('contact.send')}}" method="post">
+                    @csrf
+                    <div class="card-body">
+                        <div class="input-group{{ $errors->has('nome') ? ' has-danger' : '' }}">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">
+                                    <i class="tim-icons icon-single-02"></i>
+                                </div>
+                            </div>
+                            <input type="text" name="nome" class="form-control{{ $errors->has('nome') ? ' is-invalid' : '' }}" placeholder="{{ __('Name') }}">
+                        </div>
+                        <div class="input-group{{ $errors->has('emails') ? ' has-danger' : '' }}">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">
+                                    <i class="tim-icons icon-email-85"></i>
+                                </div>
+                            </div>
+                            <input type="email" name="email" class="form-control{{ $errors->has('emails') ? ' is-invalid' : '' }}" placeholder="{{ __('Email') }}">
+                        </div>
 
-  <h1 class="display-4">Contato</h1>
-  <hr class="my-4">
-  <p class="lead">Trabalhamos para desenvolver o seu site. Onde você estiver nós chegamos até você.  Desenvolvemos o seu site por um preço acessível.</p>
-</div>
-</div>
-<div class="container py-5">
-  @include('partials.messages')
-<form action="{{route('contact.send')}}" method="POST">
-  {{ csrf_field ()}}
-  <div class="form-group">
-    <label>Nome</label>
-    <input type="text" class="form-control" name="nome" aria-describedby="nome" placeholder="Seu Nome">
-  </div>
-  <div class="form-group">
-    <label>Email address</label>
-    <input type="text" class="form-control" name="email" aria-describedby="email" placeholder="Enter email">
-  </div>
-  <div class="form-group">
-    <label>Telefone</label>
-    <input type="text" class="form-control" name="telefone" aria-describedby="telefone" placeholder="Seu Telefone">
-  </div>
-  <div class="form-group">
-    <label>O que procura</label>
-    <input type="text" class="form-control" name="descricao" aria-describedby="descricao" placeholder="O que procura?">
-  </div>
-  <button type="submit" class="btn btn-success" role="button">Submit</button>
-</form>
-</div>
+                        <div class="input-group{{ $errors->has('telefone') ? ' has-danger' : '' }}">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">
+                                    <i class="tim-icons icon-mobile"></i>
+                                </div>
+                            </div>
+                            <input type="text" name="telefone" class="form-control{{ $errors->has('telefone') ? ' is-invalid' : '' }}" placeholder="{{ __('Telefone') }}">
+                        </div>
+
+                        <div class="input-group{{ $errors->has('descricao') ? ' has-danger' : '' }}">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">
+                                    <i class="tim-icons icon-notes"></i>
+                                </div>
+                            </div>
+                            <input type="text" name="descricao" class="form-control{{ $errors->has('descricao') ? ' is-invalid' : '' }}" placeholder="{{ __('Descricao') }}">
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <button type="submit" class="btn btn-primary" role="button">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
 @endsection
+

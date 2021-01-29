@@ -2,7 +2,11 @@
 
 use App\Mail\ContactMail;
 use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ContactController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -19,9 +23,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-});
+
 
 Route::get('/diretoria', function () {
     return view('diretoria');
@@ -31,22 +33,24 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');;
 
-#Route::get('/contact', function () {
-#    return view('contact');
-#})->name('contact');;
+//Route::get('/contato', function () {
+//    return view('contact');
+//})->name('contact');;
 
-Route::get('/contato', function () {
-    return view('contato');
-})->name('contato');;
+Route::get('contact', [ContactController::class, 'index']);
+Route::post('send', [ContactController::class, 'send'])->name('contact.send');
+//Route::post('/contato', 'HomeController@postContact')->name('contact.send');
 
-Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Auth::routes();
 
-#Route::post('/contato', 'HomeController@postContact')->name('contact.send');
-Route::post('/contato', 'App\Http\Controllers\HomeController@postContact')->name('contato.send');
+
+
+Route::get('/home', [HomeController::class, 'index'])->name('home');
+
+Auth::routes();
+
 Route::get('/home', 'App\Http\Controllers\HomeController@index')->name('home')->middleware('auth');
 
 Route::group(['middleware' => 'auth'], function () {
