@@ -30,7 +30,7 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');;
 
-Route::get('contact', [ContactController::class, 'index']);
+Route::get('contact', [ContactController::class, 'index'])->name('contact');
 
 Route::post('send', [ContactController::class, 'send'])->name('contact.send');
 
