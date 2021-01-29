@@ -2,38 +2,25 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Mail;
-use App\Mail\ContactMail;
-
 class HomeController extends Controller
 {
     /**
-     * Handle the incoming request.
+     * Create a new controller instance.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
+     * @return void
      */
-    public function __invoke(Request $request)
+    public function __construct()
     {
-
+        $this->middleware('auth');
     }
 
+    /**
+     * Show the application dashboard.
+     *
+     * @return \Illuminate\View\View
+     */
     public function index()
     {
         return view('dashboard');
-    }
-
-    public function postContact(Request $request)
-    {
-        $fields = $request->validate([
-            'nome' => 'required|between:5,50',
-            'emails' => 'required|emails|between:5,50',
-            'telefone' => 'required|numeric|',
-            'descricao' => 'required|min:5',
-        ]);
-
-        Mail::to('eduardobaranowski@gmail.com')->send(new ContactMail($fields));
-        return view('contact');
     }
 }

@@ -53,13 +53,13 @@
                             </div>
                             <input type="text" name="nome" class="form-control{{ $errors->has('nome') ? ' is-invalid' : '' }}" placeholder="{{ __('Name') }}">
                         </div>
-                        <div class="input-group{{ $errors->has('emails') ? ' has-danger' : '' }}">
+                        <div class="input-group{{ $errors->has('email') ? ' has-danger' : '' }}">
                             <div class="input-group-prepend">
                                 <div class="input-group-text">
                                     <i class="tim-icons icon-email-85"></i>
                                 </div>
                             </div>
-                            <input type="email" name="email" class="form-control{{ $errors->has('emails') ? ' is-invalid' : '' }}" placeholder="{{ __('Email') }}">
+                            <input type="email" name="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" placeholder="{{ __('Email') }}">
                         </div>
 
                         <div class="input-group{{ $errors->has('telefone') ? ' has-danger' : '' }}">

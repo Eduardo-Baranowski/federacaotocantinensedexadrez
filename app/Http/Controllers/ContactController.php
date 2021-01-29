@@ -14,7 +14,7 @@ class ContactController extends Controller
     {
         return view('contact');
     }
-    function send(Request $request){
+    public function send(Request $request){
         $fields = $request->validate([
             'nome' => 'required|between:5,50',
             'email' => 'required|email|between:5,50',
