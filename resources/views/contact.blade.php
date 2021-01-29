@@ -42,6 +42,7 @@
                     <img class="card-img" src="{{ asset('black') }}/img/card-primary.png" alt="Card image">
                     <h4 class="card-title">{{ __('Contato') }}</h4>
                 </div>
+                @include('partials.messages')
                 <form action="{{route('contact.send')}}" method="post">
                     @csrf
                     <div class="card-body">

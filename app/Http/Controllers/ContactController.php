@@ -22,7 +22,7 @@ class ContactController extends Controller
             'descricao' => 'required|min:5',
         ]);
 
-        Mail::to('eduardobaranowski@gmail.com')->send(new ContactMail($fields));
+        Mail::to('tocantinsftx@gmail.com')->send(new ContactMail($fields));
         return view('contact');
     }
 }
