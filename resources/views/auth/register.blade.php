@@ -1,16 +1,16 @@
-@extends('layouts.app', ['class' => 'register-page', 'page' => __('Register Page'), 'contentClass' => 'register-page'])
+@extends('layouts.app', ['class' => 'register-page', 'page' => __('Página de Registro'), 'contentClass' => 'register-page'])
 
 @section('content')
     <div class="row">
         <div class="col-md-5 ml-auto">
             <div class="info-area info-horizontal mt-5">
                 <div class="icon icon-warning">
-                    <i class="tim-icons icon-wifi"></i>
+                    <i class="tim-icons icon-badge"></i>
                 </div>
                 <div class="description">
-                    <h3 class="info-title">{{ __('Marketing') }}</h3>
+                    <h3 class="info-title">{{ __('Benefícios') }}</h3>
                     <p class="description">
-                        {{ __('We\'ve created the marketing campaign of the website. It was a very interesting collaboration.') }}
+                        {{ __('Registre-se para fazer parte da comunidade enxadrística tocantinense. Com o registro é possível ter acesso aos serviços adicionais do site.') }}
                     </p>
                 </div>
             </div>
@@ -19,9 +19,9 @@
                     <i class="tim-icons icon-triangle-right-17"></i>
                 </div>
                 <div class="description">
-                    <h3 class="info-title">{{ __('Fully Coded in HTML5') }}</h3>
+                    <h3 class="info-title">{{ __('Base de Dados') }}</h3>
                     <p class="description">
-                        {{ __('We\'ve developed the website with HTML5 and CSS3. The client has access to the code using GitHub.') }}
+                        {{ __('Tenha fácil acesso a base de dados com partidas dos campeonatos tocantinenses.') }}
                     </p>
                 </div>
             </div>
@@ -30,9 +30,9 @@
                     <i class="tim-icons icon-trophy"></i>
                 </div>
                 <div class="description">
-                    <h3 class="info-title">{{ __('Built Audience') }}</h3>
+                    <h3 class="info-title">{{ __('Torneios') }}</h3>
                     <p class="description">
-                        {{ __('There is also a Fully Customizable CMS Admin Dashboard for this product.') }}
+                        {{ __('Participe com facilidade dos campeonatos disputados no Tocantins.') }}
                     </p>
                 </div>
             </div>
@@ -41,7 +41,7 @@
             <div class="card card-register card-white">
                 <div class="card-header">
                     <img class="card-img" src="{{ asset('black') }}/img/card-primary.png" alt="Card image">
-                    <h4 class="card-title">{{ __('Register') }}</h4>
+                    <h4 class="card-title">{{ __('Registro') }}</h4>
                 </div>
                 <form class="form" method="post" action="{{ route('register') }}">
                     @csrf
@@ -92,7 +92,7 @@
                         </div>
                     </div>
                     <div class="card-footer">
-                        <button type="submit" class="btn btn-primary btn-round btn-lg">{{ __('Get Started') }}</button>
+                        <button type="submit" class="btn btn-primary btn-round btn-lg">{{ __('Criar Conta') }}</button>
                     </div>
                 </form>
             </div>
