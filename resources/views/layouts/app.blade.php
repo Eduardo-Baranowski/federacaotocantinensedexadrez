@@ -8,6 +8,9 @@
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
         <title>{{ config('app.name', 'FTX') }}</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" />
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <!-- Favicon -->
         <link rel="apple-touch-icon" sizes="76x76" href="{{ asset('black') }}/img/logopreta.jpeg">
         <link rel="icon" type="image/png" href="{{ asset('black') }}/img/logopreta.jpeg">
@@ -76,13 +79,13 @@
                     Chesstempo
                     </a>
                 </li>
-                <li class="header-title">Thank you for 95 shares!</li>
+                <li class="header-title">Outras organizações interessantes!</li>
                 <li class="button-container text-center">
-                    <button id="twitter" class="btn btn-round btn-info"><i class="fab fa-twitter"></i> &middot; 45</button>
-                    <button id="facebook" class="btn btn-round btn-info"><i class="fab fa-facebook-f"></i> &middot; 50</button>
+                    <button onclick="window.open('https://www.twitch.tv/')" id="twich" class="btn btn-round btn-info">twich</button>
+                    <button onclick="window.open('https://www.fide.com/')" id="fide" class="btn btn-round btn-info">FIDE</button>
+                    <button onclick="window.open('http://chess24.com/')" id="chess24" class="btn btn-round btn-info">chess24</button>
                     <br>
                     <br>
-                    <a class="github-button" href="https://github.com/creativetimofficial/black-dashboard-laravel" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star ntkme/github-buttons on GitHub">Star</a>
                 </li>
                 </ul>
             </div>
