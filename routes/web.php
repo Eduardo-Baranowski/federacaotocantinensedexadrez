@@ -7,7 +7,6 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ContactController;
 
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -23,8 +22,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-
-
 Route::get('/diretoria', function () {
     return view('diretoria');
 })->name('diretoria');;
@@ -33,19 +30,11 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');;
 
-//Route::get('/contato', function () {
-//    return view('contact');
-//})->name('contact');;
-
 Route::get('contact', [ContactController::class, 'index']);
+
 Route::post('send', [ContactController::class, 'send'])->name('contact.send');
-//Route::post('/contato', 'HomeController@postContact')->name('contact.send');
-
-
 
 Auth::routes();
-
-
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 
