@@ -6,9 +6,6 @@
       <div class="card">
         <div class="card-header">
           <h5 class="title">Diretoria FTX</h5>
-          <p class="category">Handcrafted by our friends from
-            <a href="https://nucleoapp.com/?ref=1712">NucleoApp</a>
-          </p>
         </div>
         <div class="card-body all-icons">
           <div class="row">
