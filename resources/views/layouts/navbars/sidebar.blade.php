@@ -1,14 +1,14 @@
 <div class="sidebar">
     <div class="sidebar-wrapper">
         <div class="logo">
-            <a href="#" class="simple-text logo-mini">{{ __('BD') }}</a>
-            <a href="#" class="simple-text logo-normal">{{ __('Black Dashboard') }}</a>
+            <a href="#" class="simple-text logo-mini">{{ __('FTX') }}</a>
+            <a href="#" class="simple-text logo-normal">{{ __('Xadrez Tocantins') }}</a>
         </div>
         <ul class="nav">
             <li @if ($pageSlug ?? '' == 'dashboard') class="active " @endif>
                 <a href="{{ route('dashboard') }}">
                     <i class="tim-icons icon-chart-pie-36"></i>
-                    <p>{{ __('Dashboard') }}</p>
+                    <p>{{ __('Home') }}</p>
                 </a>
             </li>
             <li>
@@ -18,7 +18,7 @@
                     <b class="caret mt-1"></b>
                 </a>
 
-                <div class="collapse show" id="laravel-examples">
+                <div class="collapse" id="laravel-examples">
                     <ul class="nav pl-4">
                         <li @if ($pageSlug ?? '' == 'profile') class="active " @endif>
                             <a href="{{ route('profile.edit')  }}">
@@ -44,7 +44,7 @@
             <li @if ($pageSlug ?? '' == 'maps') class="active " @endif>
                 <a href="{{ route('pages.maps') }}">
                     <i class="tim-icons icon-pin"></i>
-                    <p>{{ __('EURUSD') }}</p>
+                    <p>{{ __('Localização') }}</p>
                 </a>
             </li>
             <li @if ($pageSlug ?? '' == 'notifications') class="active " @endif>
@@ -63,12 +63,6 @@
                 <a href="{{ route('pages.typography') }}">
                     <i class="tim-icons icon-align-center"></i>
                     <p>{{ __('Typography') }}</p>
-                </a>
-            </li>
-            <li @if ($pageSlug ?? '' == 'rtl') class="active " @endif>
-                <a href="{{ route('pages.rtl') }}">
-                    <i class="tim-icons icon-world"></i>
-                    <p>{{ __('RTL Support') }}</p>
                 </a>
             </li>
             <li class=" {{ $pageSlug ?? '' == 'upgrade' ? 'active' : '' }} bg-info">

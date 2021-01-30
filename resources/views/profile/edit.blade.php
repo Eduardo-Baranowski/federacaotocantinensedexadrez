@@ -75,19 +75,28 @@
                             <div class="block block-three"></div>
                             <div class="block block-four"></div>
                             <a href="#">
-                                <img class="avatar" src="{{ asset('black') }}/img/emilyz.jpg" alt="">
+                                <img class="avatar" src="{{ asset('black') }}/img/{{Auth::user()->name}}.jpg" onerror="this.src='{{ asset('black') }}/img/default-avatar.png'" alt="">
                                 <h5 class="title">{{ auth()->user()->name }}</h5>
                             </a>
-                            <p class="description">
-                                {{ __('Ceo/Co-Founder') }}
-                            </p>
+                            @if (Auth::user()->name == 'Eduardo Baranowski')
+                                <p class="description">
+                                    {{ __('Diretor Técnico') }}
+                                </p>
+                            @else
+                                <p class="description">
+                                    {{ __('Membor da FTX') }}
+                                </p>
+                            @endif
                         </div>
                     </p>
+                    <!--
                     <div class="card-description">
                         {{ __('Do not be scared of the truth because we need to restart the human foundation in truth And I love you like Kanye loves Kanye I love Rick Owens’ bed design but the back is...') }}
                     </div>
+                    -->
                 </div>
                 <div class="card-footer">
+                    <!--
                     <div class="button-container">
                         <button class="btn btn-icon btn-round btn-facebook">
                             <i class="fab fa-facebook"></i>
@@ -99,6 +108,7 @@
                             <i class="fab fa-google-plus"></i>
                         </button>
                     </div>
+                    -->
                 </div>
             </div>
         </div>
