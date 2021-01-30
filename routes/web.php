@@ -26,6 +26,54 @@ Route::get('/diretoria', function () {
     return view('diretoria');
 })->name('diretoria');;
 
+Route::get('/diretortec', function () {
+    return view('diretortec');
+})->name('diretortec');;
+
+Route::get('/diretorarb', function () {
+    return view('diretorarb');
+})->name('diretorarb');;
+
+Route::get('/diretormed', function () {
+    return view('diretormed');
+})->name('diretormed');;
+
+Route::get('/diretorpat', function () {
+    return view('diretorpat');
+})->name('diretorpat');;
+
+Route::get('/diretorsec', function () {
+    return view('diretorsec');
+})->name('diretorsec');;
+
+Route::get('/diretortes', function () {
+    return view('diretortes');
+})->name('diretortes');;
+
+Route::get('/diretorcon1', function () {
+    return view('diretorcon1');
+})->name('diretorcon1');;
+
+Route::get('/diretorcon2', function () {
+    return view('diretorcon2');
+})->name('diretorcon2');;
+
+Route::get('/diretorcon3', function () {
+    return view('diretorcon3');
+})->name('diretorcon3');;
+
+Route::get('/diretorcon1s', function () {
+    return view('diretorcon1s');
+})->name('diretorcon1s');;
+
+Route::get('/diretorcon2s', function () {
+    return view('diretorcon2s');
+})->name('diretorcon2s');;
+
+Route::get('/diretorcon3s', function () {
+    return view('diretorcon3s');
+})->name('diretorcon3s');;
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');;
