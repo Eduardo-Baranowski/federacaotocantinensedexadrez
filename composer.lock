@@ -726,7 +726,7 @@
                 }
             ],
             "description": "Guzzle is a PHP HTTP client library",
-            "homepage": "http://guzzlephp.org/",
+            "homepage": "https://guzzlephp.org/",
             "keywords": [
                 "client",
                 "curl",
