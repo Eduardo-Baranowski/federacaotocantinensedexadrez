@@ -107,7 +107,9 @@ Route::group(['middleware' => 'auth'], function () {
 });
 
 Route::group(['middleware' => 'auth'], function () {
-    Route::resource('user', 'App\Http\Controllers\UserController', ['except' => ['show']]);
+    //Route::resource('user', 'App\Http\Controllers\UserController', ['except' => ['show']]);
+    //Route::resource('user', [App\Http\Controllers\UserController::class, 'index'])->name('users.index');
+    Route::get('user', [App\Http\Controllers\UserController::class, 'index'])->name('users.index');
     //Route::get('profile', ['as' => 'profile.edit', 'uses' => 'App\Http\Controllers\ProfileController@edit']);
     Route::get('profile', [App\Http\Controllers\ProfileController::class, 'edit'])->name('profile.edit');
     //Route::put('profile', ['as' => 'profile.update', 'uses' => 'App\Http\Controllers\ProfileController@update']);

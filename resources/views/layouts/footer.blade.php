@@ -22,10 +22,16 @@
                 </button>
             </li>
             <li class="nav-item">
+                <button onclick="window.open('mailto:admin@black.com')" class="btn btn-icon btn-round btn-blogger">
+                    <i class="fab fa-google"></i>
+                </button>
+            </li>
+            <li class="nav-item">
                 <a href="#" class="nav-link">
                     {{ __('Sobre') }}
                 </a>
             </li>
+
         </ul>
         <div class="copyright">
             &copy; {{ now()->year }} {{ __('Produzido pela ') }} <i class="tim-icons icon-trophy"></i>

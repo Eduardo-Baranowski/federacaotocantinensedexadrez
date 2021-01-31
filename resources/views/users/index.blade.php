@@ -65,9 +65,9 @@
                                     </div>
                                     <ul class="nav">
                                         <li>
-                                            <a href="{{ route('home') }}">
+                                            <a href="{{ route('dashboard') }}">
                                                 <i class="tim-icons icon-chart-pie-36"></i>
-                                                <p>{{ __('Dashboard') }}</p>
+                                                <p>{{ __('Home') }}</p>
                                             </a>
                                         </li>
                                         <li>
@@ -86,7 +86,7 @@
                                                         </a>
                                                     </li>
                                                     <li class="active">
-                                                        <a href="{{ route('user.index')  }}">
+                                                        <a href="{{ route('users.index')  }}">
                                                             <i class="tim-icons icon-bullet-list-67"></i>
                                                             <p>{{ __('User Management') }}</p>
                                                         </a>
@@ -124,12 +124,7 @@
                                                 <p>{{ __('Typography') }}</p>
                                             </a>
                                         </li>
-                                        <li >
-                                            <a href="{{ route('pages.rtl') }}">
-                                                <i class="tim-icons icon-world"></i>
-                                                <p>{{ __('RTL Support') }}</p>
-                                            </a>
-                                        </li>
+
                                         <li class=" {{ $pageSlug ?? '' == 'upgrade' ? 'active' : '' }} bg-info">
                                             <a href="{{ route('pages.upgrade') }}">
                                                 <i class="tim-icons icon-spaceship"></i>
