@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+use Response;
 
 class HomeController extends Controller
 {
@@ -23,4 +24,6 @@ class HomeController extends Controller
     {
         return view('dashboard');
     }
+
+
 }

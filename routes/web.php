@@ -22,6 +22,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/estatuto', function () {
+    return view('estatuto');
+})->name('estatuto');;
+
 Route::get('/diretoria', function () {
     return view('diretoria');
 })->name('diretoria');;
@@ -81,6 +85,8 @@ Route::get('/dashboard', function () {
 Route::get('contact', [ContactController::class, 'index'])->name('contact');
 
 Route::post('send', [ContactController::class, 'send'])->name('contact.send');
+
+Route::get('/download', [ContactController::class, 'getDownload'])->name('download');
 
 Auth::routes();
 

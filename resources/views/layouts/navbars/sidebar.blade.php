@@ -14,7 +14,7 @@
             <li>
                 <a data-toggle="collapse" href="#laravel-examples" aria-expanded="true">
                     <i class="fab fa-laravel" ></i>
-                    <span class="nav-link-text" >{{ __('Laravel Examples') }}</span>
+                    <span class="nav-link-text" >{{ __('Sobre a FTX') }}</span>
                     <b class="caret mt-1"></b>
                 </a>
 
@@ -30,6 +30,12 @@
                             <a href="{{ route('users.index')  }}">
                                 <i class="tim-icons icon-bullet-list-67"></i>
                                 <p>{{ __('User Management') }}</p>
+                            </a>
+                        </li>
+                        <li @if ($pageSlug ?? '' == 'estatuto') class="active " @endif>
+                            <a href="{{ route('estatuto')  }}">
+                                <i class="tim-icons icon-paper"></i>
+                                <p>{{ __('Estatuto') }}</p>
                             </a>
                         </li>
                     </ul>

@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Mail\ContactMail;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
-
+use Response;
 use Illuminate\Validation\Validator;
 
 class ContactController extends Controller
@@ -24,5 +24,15 @@ class ContactController extends Controller
 
         Mail::to('tocantinsftx@gmail.com')->send(new ContactMail($fields));
         return view('contact');
+    }
+    public function getDownload(){
+
+        $file= public_path(). "/black/pdf/Estatuto.pdf";
+
+        $headers = array(
+            'Content-Type: application/pdf',
+        );
+
+        return Response::download($file, 'estatutoftx.pdf', $headers);
     }
 }
