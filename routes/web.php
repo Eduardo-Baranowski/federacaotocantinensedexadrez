@@ -26,6 +26,10 @@ Route::get('/estatuto', function () {
     return view('estatuto');
 })->name('estatuto');;
 
+Route::get('/calendario', function () {
+    return view('calendario');
+})->name('calendario');;
+
 Route::get('/diretoria', function () {
     return view('diretoria');
 })->name('diretoria');;

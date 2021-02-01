@@ -723,11 +723,11 @@ demo = {
   },
 
   showNotification: function(from, align) {
-    color = Math.floor((Math.random() * 4) + 1);
+    color = "ff9d89";
 
     $.notify({
       icon: "tim-icons icon-bell-55",
-      message: "Welcome to <b>Black Dashboard</b> - a beautiful freebie for every web developer."
+        message: "Clique no link para a <b><a href='https://lichess.org/team/xadrez-suico' target='_blank'><p class='text-dark'>Equipe do Lichess</p></a></b>"
 
     }, {
       type: type[color],

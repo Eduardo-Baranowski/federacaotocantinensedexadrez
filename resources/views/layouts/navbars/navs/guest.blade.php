@@ -23,6 +23,11 @@
                     </a>
                 </li>
                 <li class="nav-item ">
+                    <a href="{{ route('calendario') }}" class="nav-link">
+                        <i class="tim-icons icon-laptop"></i> {{ __('Calendário') }}
+                    </a>
+                </li>
+                <li class="nav-item ">
                     <a href="{{ route('register') }}" class="nav-link">
                         <i class="tim-icons icon-laptop"></i> {{ __('Registro') }}
                     </a>
