@@ -18,8 +18,8 @@
 
                         </thead>
                         <tbody>
+                        <tr><td><a href="https://www.fide.com/" target="_blank">FIDE - Federação Internacional de Xadrez</a></td></tr>
                         <tr><td><a href="http://www.cbx.org.br/" target="_blank">CBX - Confederação Brasileira de Xadrez</a></td></tr>
-                        <tr><td><a href="http://fax-am.com.br/" target="_blank">FAX - Federação Amazonense de Xadrez</a></td></tr>
                         <tr><td><a href="http://fbx.org.br/" target="_blank">FBX - Federação Brasiliense de Xadrez</a></td></tr>
                         <tr><td><a href="http://www.fcx.org.br/" target="_blank">FCX - Federação Catarinense de Xadrez</a></td></tr>
                         <tr><td><a href="https://xadrezcearense.wordpress.com/" target="_blank">FCX - Federação Cearense de Xadrez</a></td></tr>
