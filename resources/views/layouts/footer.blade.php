@@ -26,11 +26,6 @@
                     <i class="fab fa-google"></i>
                 </button>
             </li>
-            <li class="nav-item">
-                <a href="#" class="nav-link">
-                    {{ __('Sobre') }}
-                </a>
-            </li>
 
         </ul>
         <div class="copyright">

@@ -23,18 +23,18 @@
                     </a>
                 </li>
                 <li class="nav-item ">
+                    <a href="{{ route('home') }}" class="nav-link">
+                        <i class="tim-icons icon-trophy"></i> {{ __('Home') }}
+                    </a>
+                </li>
+                <li class="nav-item ">
                     <a href="{{ route('calendario') }}" class="nav-link">
                         <i class="tim-icons icon-calendar-60"></i> {{ __('Calendário') }}
                     </a>
                 </li>
                 <li class="nav-item ">
-                    <a href="{{ route('register') }}" class="nav-link">
-                        <i class="tim-icons icon-laptop"></i> {{ __('Registro') }}
-                    </a>
-                </li>
-                <li class="nav-item ">
-                    <a href="{{ route('login') }}" class="nav-link">
-                        <i class="tim-icons icon-single-02"></i> {{ __('Login') }}
+                    <a href="{{ route('links') }}" class="nav-link">
+                        <i class="tim-icons icon-link-72"></i> {{ __('Links') }}
                     </a>
                 </li>
                 <li class="nav-item ">
@@ -45,6 +45,16 @@
                 <li class="nav-item ">
                     <a href="{{ route('estatuto') }}" class="nav-link">
                         <i class="tim-icons icon-paper"></i> {{ __('Estatuto') }}
+                    </a>
+                </li>
+                <li class="nav-item ">
+                    <a href="{{ route('register') }}" class="nav-link">
+                        <i class="tim-icons icon-laptop"></i> {{ __('Registro') }}
+                    </a>
+                </li>
+                <li class="nav-item ">
+                    <a href="{{ route('login') }}" class="nav-link">
+                        <i class="tim-icons icon-single-02"></i> {{ __('Login') }}
                     </a>
                 </li>
                 <li class="nav-item ">

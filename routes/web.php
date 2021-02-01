@@ -22,9 +22,17 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/home', function () {
+    return view('welcome');
+})->name('home');;
+
 Route::get('/estatuto', function () {
     return view('estatuto');
 })->name('estatuto');;
+
+Route::get('/links', function () {
+    return view('links');
+})->name('links');;
 
 Route::get('/calendario', function () {
     return view('calendario');
@@ -94,11 +102,11 @@ Route::get('/download', [ContactController::class, 'getDownload'])->name('downlo
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+//Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Auth::routes();
 
-Route::get('/home', 'App\Http\Controllers\HomeController@index')->name('home')->middleware('auth');
+//Route::get('/home', 'App\Http\Controllers\HomeController@index')->name('home')->middleware('auth');
 
 Route::group(['middleware' => 'auth'], function () {
     //Route::get('icons', ['as' => 'pages.icons', 'uses' => 'App\Http\Controllers\PageController@icons']);
