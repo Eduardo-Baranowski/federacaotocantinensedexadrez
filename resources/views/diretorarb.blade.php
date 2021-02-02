@@ -5,7 +5,7 @@
               <div class="col-lg-6 col-md-12">
                   <div class="card">
                       <div class="card-header">
-                          <h5 class="title">Diretor Técnico</h5>
+                          <h5 class="title">Diretor de Arbitragem</h5>
                       </div>
 
                       <div class="card-body ">
@@ -18,7 +18,7 @@
                                           <div class="block block-three"></div>
                                           <div class="block block-four"></div>
                                           <a href="#">
-                                              <img class="avatar" src="{{ asset('black') }}/img/gabriel.jpg" onerror="this.src='{{ asset('black') }}/img/default-avatar.png'" alt="">
+                                              <img class="avatar" src="{{ asset('black') }}/img/gabriel.jpeg" onerror="this.src='{{ asset('black') }}/img/default-avatar.png'" alt="">
                                               <h5 class="title">WASHINGTON GABRIEL PIRES</h5>
                                           </a>
 
