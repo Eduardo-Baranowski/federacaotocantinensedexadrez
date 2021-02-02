@@ -22,6 +22,51 @@
                         <span class="d-lg-none d-md-block">{{ __('Search') }}</span>
                     </button>
                 </li>
+                <li class="nav-item">
+                    <a href="{{ route('dashboard') }}" class="nav-link text-primary">
+                        {{ __('Informações') }}
+                    </a>
+                </li>
+                <li class="nav-item ">
+                    <a href="{{ route('home') }}" class="nav-link">
+                        {{ __('Home') }}
+                    </a>
+                </li>
+                <li class="nav-item ">
+                    <a href="{{ route('calendario') }}" class="nav-link">
+                        {{ __('Calendário') }}
+                    </a>
+                </li>
+                <li class="nav-item ">
+                    <a href="{{ route('links') }}" class="nav-link">
+                        {{ __('Links') }}
+                    </a>
+                </li>
+                <li class="nav-item ">
+                    <a href="{{ route('diretoria') }}" class="nav-link">
+                        {{ __('Diretoria') }}
+                    </a>
+                </li>
+                <li class="nav-item ">
+                    <a href="{{ route('estatuto') }}" class="nav-link">
+                        {{ __('Estatuto') }}
+                    </a>
+                </li>
+                <li class="nav-item ">
+                    <a href="{{ route('register') }}" class="nav-link">
+                        {{ __('Registro') }}
+                    </a>
+                </li>
+                <li class="nav-item ">
+                    <a href="{{ route('login') }}" class="nav-link">
+                        {{ __('Login') }}
+                    </a>
+                </li>
+                <li class="nav-item ">
+                    <a href="{{ route('contact') }}" class="nav-link">
+                        {{ __('Contato') }}
+                    </a>
+                </li>
                 <!--
                 <li class="dropdown nav-item">
                     <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">

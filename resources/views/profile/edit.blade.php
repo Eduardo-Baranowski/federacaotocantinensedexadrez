@@ -84,7 +84,7 @@
                                 </p>
                             @else
                                 <p class="description">
-                                    {{ __('Membor da FTX') }}
+                                    {{ __('Membro da FTX') }}
                                 </p>
                             @endif
                         </div>
