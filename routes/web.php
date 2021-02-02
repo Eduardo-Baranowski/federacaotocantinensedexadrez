@@ -100,39 +100,35 @@ Route::post('send', [ContactController::class, 'send'])->name('contact.send');
 
 Route::get('/download', [ContactController::class, 'getDownload'])->name('download');
 
-Auth::routes();
-
-//Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/view', [ContactController::class, 'viewEstatuto'])->name('view');
 
 Auth::routes();
 
-//Route::get('/home', 'App\Http\Controllers\HomeController@index')->name('home')->middleware('auth');
+
+
+Auth::routes();
+
+
 
 Route::group(['middleware' => 'auth'], function () {
-    //Route::get('icons', ['as' => 'pages.icons', 'uses' => 'App\Http\Controllers\PageController@icons']);
+
     Route::get('icons', [App\Http\Controllers\PageController::class, 'icons'])->name('pages.icons');
-    //Route::get('maps', ['as' => 'pages.maps', 'uses' => 'App\Http\Controllers\PageController@maps']);
+
     Route::get('maps', [App\Http\Controllers\PageController::class, 'maps'])->name('pages.maps');
-    //Route::get('notifications', ['as' => 'pages.notifications', 'uses' => 'App\Http\Controllers\PageController@notifications']);
+
     Route::get('notifications', [App\Http\Controllers\PageController::class, 'notifications'])->name('pages.notifications');
-    //Route::get('rtl', ['as' => 'pages.rtl', 'uses' => 'App\Http\Controllers\PageController@rtl']);
-    //Route::get('tables', ['as' => 'pages.tables', 'uses' => 'App\Http\Controllers\PageController@tables']);
+
     Route::get('tables', [App\Http\Controllers\PageController::class, 'tables'])->name('pages.tables');
-    //Route::get('typography', ['as' => 'pages.typography', 'uses' => 'App\Http\Controllers\PageController@typography']);
+
     Route::get('typography', [App\Http\Controllers\PageController::class, 'typography'])->name('pages.typography');
-    //Route::get('upgrade', ['as' => 'pages.upgrade', 'uses' => 'App\Http\Controllers\PageController@upgrade']);
+
     Route::get('upgrade', [App\Http\Controllers\PageController::class, 'upgrade'])->name('pages.upgrade');
 });
 
 Route::group(['middleware' => 'auth'], function () {
-    //Route::resource('user', 'App\Http\Controllers\UserController', ['except' => ['show']]);
-    //Route::resource('user', [App\Http\Controllers\UserController::class, 'index'])->name('users.index');
     Route::get('user', [App\Http\Controllers\UserController::class, 'index'])->name('users.index');
-    //Route::get('profile', ['as' => 'profile.edit', 'uses' => 'App\Http\Controllers\ProfileController@edit']);
     Route::get('profile', [App\Http\Controllers\ProfileController::class, 'edit'])->name('profile.edit');
-    //Route::put('profile', ['as' => 'profile.update', 'uses' => 'App\Http\Controllers\ProfileController@update']);
     Route::put('profile', [App\Http\Controllers\ProfileController::class, 'update'])->name('profile.update');
-    //Route::put('profile/password', ['as' => 'profile.password', 'uses' => 'App\Http\Controllers\ProfileController@password']);
     Route::put('profile/password', [App\Http\Controllers\ProfileController::class, 'password'])->name('profile.password');
 });
 

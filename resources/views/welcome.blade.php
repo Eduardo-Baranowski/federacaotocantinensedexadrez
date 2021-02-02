@@ -29,10 +29,10 @@
                             <img src="{{ asset('black') }}/img/logofooter.jpeg" class="d-block w-100" style="width: 100px; height: 300px" alt="...">
                         </div>
                         <div class="carousel-item">
-                            <img src="{{ asset('black') }}/img/logofooter.jpeg" class="d-block w-100" style="width: 100px; height: 300px" alt="...">
+                            <img src="{{ asset('black') }}/img/jalapao.jpg" class="d-block w-100" style="width: 100px; height: 300px" alt="...">
                         </div>
                         <div class="carousel-item">
-                            <img src="{{ asset('black') }}/img/logofooter.jpeg" class="d-block w-100" style="width: 100px; height: 300px" alt="...">
+                            <img src="{{ asset('black') }}/img/page_10.jpeg" class="d-block w-100" style="width: 100px; height: 300px" alt="...">
                         </div>
                     </div>
                     <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">

@@ -19,6 +19,7 @@
                                 <tr><th scope="col">Arquivo</th>
                                     <th scope="col">Data de upload</th>
                                     <th scope="col">Download</th>
+                                    <th scope="col">Visualização</th>
                                     <th scope="col"></th>
                                 </tr></thead>
                                 <tbody>
@@ -31,6 +32,13 @@
                                         <div class="dropdown">
                                             <a class="btn btn-sm btn-icon-only text-light" href="/download">
                                                 <i class="tim-icons icon-cloud-download-93"></i>
+                                            </a>
+                                        </div>
+                                    </td>
+                                    <td class="text-right">
+                                        <div class="dropdown">
+                                            <a class="btn btn-sm btn-icon-only text-light" href="/view">
+                                                <i class="tim-icons icon-video-66"></i>
                                             </a>
                                         </div>
                                     </td>

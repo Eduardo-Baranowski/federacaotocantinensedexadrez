@@ -1,14 +1,14 @@
 <div class="sidebar">
     <div class="sidebar-wrapper">
         <div class="logo">
-            <a href="#" class="simple-text logo-mini">{{ __('FTX') }}</a>
-            <a href="#" class="simple-text logo-normal">{{ __('Xadrez Tocantins') }}</a>
+            <a href="home" class="simple-text logo-mini">{{ __('FTX') }}</a>
+            <a href="home" class="simple-text logo-normal">{{ __('Xadrez Tocantins') }}</a>
         </div>
         <ul class="nav">
             <li @if ($pageSlug ?? '' == 'dashboard') class="active " @endif>
                 <a href="{{ route('dashboard') }}">
-                    <i class="tim-icons icon-chart-pie-36"></i>
-                    <p>{{ __('Home') }}</p>
+                    <i class="tim-icons icon-trophy"></i>
+                    <p>{{ __('Informações e Eventos') }}</p>
                 </a>
             </li>
             <li>
@@ -20,39 +20,62 @@
 
                 <div class="collapse" id="laravel-examples">
                     <ul class="nav pl-4">
-                        <li @if ($pageSlug ?? '' == 'profile') class="active " @endif>
-                            <a href="{{ route('profile.edit')  }}">
-                                <i class="tim-icons icon-single-02"></i>
-                                <p>{{ __('User Profile') }}</p>
-                            </a>
-                        </li>
+                        <!--
                         <li @if ($pageSlug ?? '' == 'users') class="active " @endif>
                             <a href="{{ route('users.index')  }}">
                                 <i class="tim-icons icon-bullet-list-67"></i>
                                 <p>{{ __('User Management') }}</p>
                             </a>
                         </li>
+                        -->
                         <li @if ($pageSlug ?? '' == 'estatuto') class="active " @endif>
                             <a href="{{ route('estatuto')  }}">
                                 <i class="tim-icons icon-paper"></i>
                                 <p>{{ __('Estatuto') }}</p>
                             </a>
                         </li>
+                        <li @if ($pageSlug ?? '' == 'diretoria') class="active " @endif>
+                            <a href="{{ route('diretoria')  }}">
+                                <i class="tim-icons icon-components"></i>
+                                <p>{{ __('Diretoria') }}</p>
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </li>
+            <li @if ($pageSlug ?? '' == 'links') class="active " @endif>
+                <a href="{{ route('links')  }}">
+                    <i class="tim-icons icon-link-72"></i>
+                    <p>{{ __('Links') }}</p>
+                </a>
+            </li>
+            <li @if ($pageSlug ?? '' == 'calendario') class="active " @endif>
+                <a href="{{ route('calendario')  }}">
+                    <i class="tim-icons icon-calendar-60"></i>
+                    <p>{{ __('Calendário') }}</p>
+                </a>
+            </li>
+            <li @if ($pageSlug ?? '' == 'profile') class="active " @endif>
+                <a href="{{ route('profile.edit')  }}">
+                    <i class="tim-icons icon-single-02"></i>
+                    <p>{{ __('User Profile') }}</p>
+                </a>
+            </li>
+            <!--
             <li @if ($pageSlug ?? '' == 'icons') class="active " @endif>
                 <a href="{{ route('pages.icons') }}">
                     <i class="tim-icons icon-atom"></i>
                     <p>{{ __('Icons') }}</p>
                 </a>
             </li>
+            -->
             <li @if ($pageSlug ?? '' == 'maps') class="active " @endif>
                 <a href="{{ route('pages.maps') }}">
                     <i class="tim-icons icon-pin"></i>
                     <p>{{ __('Localização') }}</p>
                 </a>
             </li>
+            <!--
             <li @if ($pageSlug ?? '' == 'notifications') class="active " @endif>
                 <a href="{{ route('pages.notifications') }}">
                     <i class="tim-icons icon-bell-55"></i>
@@ -77,6 +100,7 @@
                     <p>{{ __('Upgrade to PRO') }}</p>
                 </a>
             </li>
+            -->
         </ul>
     </div>
 </div>

@@ -35,4 +35,14 @@ class ContactController extends Controller
 
         return Response::download($file, 'estatutoftx.pdf', $headers);
     }
+    public function viewEstatuto(){
+
+        $file= public_path(). "/black/pdf/Estatuto.pdf";
+
+        $headers = array(
+            'Content-Type: application/pdf',
+        );
+
+        return response()->file($file, $headers);
+    }
 }
