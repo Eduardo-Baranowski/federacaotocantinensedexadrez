@@ -6,7 +6,7 @@
                 <div class="card">
                     <div class="card-header">
                         <div class="row">
-                            <div class="col-8">
+                            <div class="col-4">
                                 <h4 class="card-title">Estatuto</h4>
                             </div>
                         </div>
@@ -16,12 +16,14 @@
                         <div class="">
                             <table class="table tablesorter " id="">
                                 <thead class=" text-primary">
-                                <tr><th scope="col">Arquivo</th>
+                                <tr>
+                                    <th scope="col">Arquivo</th>
                                     <th scope="col">Data de upload</th>
                                     <th scope="col">Download</th>
                                     <th scope="col">Visualização</th>
                                     <th scope="col"></th>
-                                </tr></thead>
+                                </tr>
+                                </thead>
                                 <tbody>
                                 <tr>
                                     <td>
@@ -49,7 +51,6 @@
                     </div>
                     <div class="card-footer py-4">
                         <nav class="d-flex justify-content-end" aria-label="...">
-
                         </nav>
                     </div>
                 </div>
