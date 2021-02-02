@@ -2,14 +2,10 @@
 @section('content')
     <div class="content">
         <div class="row">
-            <div class="col-md-12">
+            <div class="col-8">
                 <div class="card">
                     <div class="card-header">
-                        <div class="row">
-                            <div class="col-4">
                                 <h4 class="card-title">Estatuto</h4>
-                            </div>
-                        </div>
                     </div>
                     <div class="card-body">
 
@@ -21,7 +17,6 @@
                                     <th scope="col">Data de upload</th>
                                     <th scope="col">Download</th>
                                     <th scope="col">Visualização</th>
-                                    <th scope="col"></th>
                                 </tr>
                                 </thead>
                                 <tbody>
@@ -30,14 +25,14 @@
                                         estatutoftx.pdf
                                     </td>
                                     <td>31/01/2021 10:43</td>
-                                    <td class="text-right">
+                                    <td>
                                         <div class="dropdown">
                                             <a class="btn btn-sm btn-icon-only text-light" href="/download">
                                                 <i class="tim-icons icon-cloud-download-93"></i>
                                             </a>
                                         </div>
                                     </td>
-                                    <td class="text-right">
+                                    <td>
                                         <div class="dropdown">
                                             <a class="btn btn-sm btn-icon-only text-light" href="/view">
                                                 <i class="tim-icons icon-video-66"></i>
