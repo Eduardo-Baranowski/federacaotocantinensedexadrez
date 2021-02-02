@@ -78,6 +78,10 @@ Route::get('/diretorcon3', function () {
     return view('diretorcon3');
 })->name('diretorcon3');;
 
+Route::get('/presidente', function () {
+    return view('presidente');
+})->name('presidente');;
+
 Route::get('/diretorcon1s', function () {
     return view('diretorcon1s');
 })->name('diretorcon1s');;
