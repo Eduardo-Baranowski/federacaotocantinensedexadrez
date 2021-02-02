@@ -26,7 +26,7 @@
                     </ol>
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <img src="{{ asset('black') }}/img/logofooter.jpeg" class="d-block w-100" style="width: 100px; height: 300px" alt="...">
+                            <img src="{{ asset('black') }}/img/page_11.jpeg" class="d-block w-100" style="width: 100px; height: 300px" alt="...">
                         </div>
                         <div class="carousel-item">
                             <img src="{{ asset('black') }}/img/jalapao.jpg" class="d-block w-100" style="width: 100px; height: 300px" alt="...">
