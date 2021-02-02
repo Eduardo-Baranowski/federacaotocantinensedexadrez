@@ -13,7 +13,7 @@
             </li>
             <li>
                 <a data-toggle="collapse" href="#laravel-examples" aria-expanded="true">
-                    <i class="fab fa-laravel" ></i>
+                    <i class="tim-icons icon-badge" ></i>
                     <span class="nav-link-text" >{{ __('Sobre a FTX') }}</span>
                     <b class="caret mt-1"></b>
                 </a>
