@@ -16,7 +16,7 @@
                                     <th scope="col">Arquivo</th>
                                     <th scope="col">Data de upload</th>
                                     <th scope="col">Download</th>
-                                    <th scope="col">Visualização</th>
+                                    <th scope="col">Ler</th>
                                 </tr>
                                 </thead>
                                 <tbody>
