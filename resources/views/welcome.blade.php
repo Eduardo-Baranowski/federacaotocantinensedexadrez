@@ -26,13 +26,13 @@
                     </ol>
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <img src="{{ asset('black') }}/img/logofooter.jpeg" class="d-inline w-50" style="width: 100px; height: 300px" alt="...">
+                            <img src="{{ asset('black') }}/img/logofooter.jpeg" class="d-inline w-75" style="width: 100px; height: 300px" alt="...">
                         </div>
                         <div class="carousel-item">
-                            <img src="{{ asset('black') }}/img/jalapao.jpg" class="d-inline w-50" style="width: 100px; height: 300px" alt="...">
+                            <img src="{{ asset('black') }}/img/jalapao.jpg" class="d-inline w-75" style="width: 100px; height: 300px" alt="...">
                         </div>
                         <div class="carousel-item">
-                            <img src="{{ asset('black') }}/img/page_10.jpeg" class="d-inline w-50" style="width: 100px; height: 300px" alt="...">
+                            <img src="{{ asset('black') }}/img/page_10.jpeg" class="d-inline w-75" style="width: 100px; height: 300px" alt="...">
                         </div>
                     </div>
                     <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
