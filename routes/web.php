@@ -112,17 +112,17 @@ Auth::routes();
 
 Route::group(['middleware' => 'auth'], function () {
 
-    Route::get('icons', [App\Http\Controllers\PageController::class, 'icons'])->name('pages.icons');
+    //Route::get('icons', [App\Http\Controllers\PageController::class, 'icons'])->name('pages.icons');
 
     Route::get('maps', [App\Http\Controllers\PageController::class, 'maps'])->name('pages.maps');
 
-    Route::get('notifications', [App\Http\Controllers\PageController::class, 'notifications'])->name('pages.notifications');
+    //Route::get('notifications', [App\Http\Controllers\PageController::class, 'notifications'])->name('pages.notifications');
 
-    Route::get('tables', [App\Http\Controllers\PageController::class, 'tables'])->name('pages.tables');
+    //Route::get('tables', [App\Http\Controllers\PageController::class, 'tables'])->name('pages.tables');
 
-    Route::get('typography', [App\Http\Controllers\PageController::class, 'typography'])->name('pages.typography');
+    //Route::get('typography', [App\Http\Controllers\PageController::class, 'typography'])->name('pages.typography');
 
-    Route::get('upgrade', [App\Http\Controllers\PageController::class, 'upgrade'])->name('pages.upgrade');
+    //Route::get('upgrade', [App\Http\Controllers\PageController::class, 'upgrade'])->name('pages.upgrade');
 });
 
 Route::group(['middleware' => 'auth'], function () {
