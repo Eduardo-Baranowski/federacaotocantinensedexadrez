@@ -53,16 +53,6 @@
                     </a>
                 </li>
                 <li class="nav-item ">
-                    <a href="{{ route('register') }}" class="nav-link">
-                        {{ __('Registro') }}
-                    </a>
-                </li>
-                <li class="nav-item ">
-                    <a href="{{ route('login') }}" class="nav-link">
-                        {{ __('Login') }}
-                    </a>
-                </li>
-                <li class="nav-item ">
                     <a href="{{ route('contact') }}" class="nav-link">
                         {{ __('Contato') }}
                     </a>
