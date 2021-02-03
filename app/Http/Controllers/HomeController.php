@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Classes\VencedorSemana;
 use Response;
 
 class HomeController extends Controller

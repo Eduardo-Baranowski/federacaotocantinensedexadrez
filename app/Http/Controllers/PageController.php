@@ -2,6 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Classes\VencedorSemana;
+
+use App\Models\User;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+
 class PageController extends Controller
 {
     /**
@@ -9,6 +15,30 @@ class PageController extends Controller
      *
      * @return \Illuminate\View\View
      */
+
+    public function index()
+    {
+        $vencedor_semanas = VencedorSemana::all();
+        //User::where("eduardobaranowski@gmail.com", Auth::user()->email)->get();
+        return view('pages.show', compact('vencedor_semanas'));
+    }
+
+    public function store(Request $request)
+    {
+        $request->validate([
+            'titulo' => 'required|max:255',
+            'texto' => 'required',
+            'descricao' => 'required|max:800',
+        ]);
+
+        $vencedor = new VencedorSemana();
+
+        $vencedor->fill($request->input());
+        $vencedor->save();
+
+        return redirect()->route('pages.show');
+    }
+
     public function icons()
     {
         return view('pages.icons');
@@ -72,5 +102,53 @@ class PageController extends Controller
     public function upgrade()
     {
         return view('pages.upgrade');
+    }
+
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  \App\VencedorSemana  $vencedor
+     * @return \Illuminate\Http\Response
+     */
+    public function edit($id)
+    {
+        $vencedor = VencedorSemana::find($id);
+
+        return view('pages.edit', compact('vencedor'));
+    }
+
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  \App\VencedorSemana  $vencedor
+     * @return \Illuminate\Http\Response
+     */
+    public function update(Request $request, $id)
+    {
+        $request->validate([
+            'titulo' => 'required|max:255',
+            'texto' => 'required',
+            'descricao' => 'required|max:800',
+        ]);
+
+        $vencedor = VencedorSemana::find($id);
+        $vencedor->fill($request->input());
+        $vencedor->save();
+
+        return redirect()->route('pages.show');
+    }
+
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  \App\VencedorSemana  $vencedor
+     * @return \Illuminate\Http\Response
+     */
+    public function delete(VencedorSemana $vencedor){
+
+        $vencedor->delete();
+
+        return redirect()->route('pages.show');
     }
 }

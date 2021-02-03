@@ -19,7 +19,7 @@
                                           <div class="block block-four"></div>
                                           <a href="#">
                                               <img class="avatar" src="{{ asset('black') }}/img/eriberto.jpeg" onerror="this.src='{{ asset('black') }}/img/default-avatar.png'" alt="">
-                                              <h5 class="title">Eiberto Nascimento</h5>
+                                              <h5 class="title">Eriberto Nascimento</h5>
                                           </a>
 
                                           <p class="description">

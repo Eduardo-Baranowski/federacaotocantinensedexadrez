@@ -1,5 +1,6 @@
 <?php
 
+use App\Classes\VencedorSemana;
 use App\Mail\ContactMail;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Auth;
@@ -95,7 +96,8 @@ Route::get('/diretorcon3s', function () {
 })->name('diretorcon3s');;
 
 Route::get('/dashboard', function () {
-    return view('dashboard');
+    $vencedor_semanas = VencedorSemana::all();
+    return view('dashboard', compact('vencedor_semanas'));
 })->name('dashboard');;
 
 Route::get('contact', [ContactController::class, 'index'])->name('contact');
@@ -112,9 +114,23 @@ Auth::routes();
 
 Auth::routes();
 
-
+Route::group(['prefix' => 'gerenciar', 'middleware' => 'auth'], function ()
+{
+    //Aqui dentro vai ficar as rotas
+});
 
 Route::group(['middleware' => 'auth'], function () {
+
+    Route::get('notes', [App\Http\Controllers\PageController::class, 'index'])->name('pages.show');
+
+    Route::post('store', [App\Http\Controllers\PageController::class, 'store'])->name('pages.store');
+
+    Route::get('/{id}/edit', [App\Http\Controllers\PageController::class, 'edit'])->name('pages.edit');
+
+    Route::post('/{id}', [App\Http\Controllers\PageController::class, 'update'])->name('pages.update');
+
+    Route::get('/{vencedor}/delete', [App\Http\Controllers\PageController::class, 'delete'])->name('pages.delete');
+
 
     //Route::get('icons', [App\Http\Controllers\PageController::class, 'icons'])->name('pages.icons');
 

@@ -54,7 +54,7 @@
             <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
               <div class="font-icon-detail">
                   <a href="{{ route('diretorcon1') }}"><img class="featurette-image img-fluid mx-auto" src="{{ asset('black') }}/img/default-avatar.png"  width="100" height="100"  alt="Generic placeholder image"></a>
-                <p>Conselheiro Fiscal: Eiberto Nascimento</p>
+                <p>Conselheiro Fiscal: Eriberto Nascimento</p>
               </div>
             </div>
             <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
