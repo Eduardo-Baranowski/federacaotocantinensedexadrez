@@ -38,6 +38,11 @@
                     </a>
                 </li>
                 <li class="nav-item ">
+                    <a href="{{ route('pages.partida') }}" class="nav-link">
+                        {{ __('Cadastro de Partida') }}
+                    </a>
+                </li>
+                <li class="nav-item ">
                     <a href="{{ route('links') }}" class="nav-link">
                         {{ __('Links') }}
                     </a>
