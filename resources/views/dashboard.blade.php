@@ -2,75 +2,62 @@
 
 @section('content')
     <div class="row">
-        <div class="col-12">
-            <div class="card ">
+        <div class="container">
+
+            <div class="card">
                 <div class="card-header">
                     <h4 class="card-title">Últimas Partidas</h4>
                 </div>
-                <div class="card-body">
-                    <div class="table-responsive">
-                        <table class="table tablesorter" id="">
-                            <thead class=" text-primary">
-                            <tr>
-                                <th>
-                                    Brancas
-                                </th>
-                                <th>
-                                    Elo Brancas
-                                </th>
-                                <th>
-                                    Negras
-                                </th>
-                                <th>
-                                    Elo Negras
-                                </th>
-                                <th>
-                                    Evento
-                                </th>
-                                <th>
-                                    Data
-                                </th>
-                                <th>
-                                    Resultado
-                                </th>
-                                <th>
-                                    Partida
-                                </th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr>
-                                <td>
-                                    Raimundo, Eudes
-                                </td>
-                                <td>
-                                    1802
-                                </td>
-                                <td>
-                                    Josias, Mascarenhas
-                                </td>
-                                <td>
-                                    1800
-                                </td>
-                                <td>
-                                    Campeonato Tocantinense de Xadrez Final
-                                </td>
-                                <td>
-                                    2010.10.09
-                                </td>
-                                <td>
-                                    0-1
-                                </td>
-                                <td>
-                                    <a href="https://lichess.org/study/SESSHCYq" target="blank">Visualizar</a>
-                                </td>
-                            </tr>
-                            </tbody>
-                        </table>
+                @if (session('status'))
+                    <div class="alert alert-success" role="alert">
+                        {{ session('status') }}
                     </div>
-                </div>
+                @endif
+
+                @forelse ($partidas as $partida)
+
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table tablesorter" id="">
+                                <thead class=" text-primary">
+                                <tr>
+                                    <th>Brancas</th>
+                                    <th>Elo Brancas</th>
+                                    <th>Negras</th>
+                                    <th>Elo Negras</th>
+                                    <th>Evento</th>
+                                    <th>Data</th>
+                                    <th>Resultado</th>
+                                    <th>Partida</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>{{ $partida->brancas}}</td>
+                                    <td>{{ $partida->elobrancas}}</td>
+                                    <td>{{ $partida->negras}}</td>
+                                    <td>{{ $partida->elonegras}}</td>
+                                    <td>{{ $partida->evento}}</td>
+                                    <td>{{ $partida->data}}</td>
+                                    <td>{{ $partida->resultado}}</td>
+                                    <td><a href="{{ $partida->link}}" target="blank">Visualizar</a></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                @empty
+                    <div class="alert alert-info">
+                        Não foram encontradas anotações.
+                    </div>
+                @endforelse
+
+
+
             </div>
         </div>
+
 
         <div class="container">
             <h4>Últimos Campeões da Semana</h4>
@@ -122,6 +109,7 @@
 
             </div>
         </div>
+
         </div>
 @endsection
 

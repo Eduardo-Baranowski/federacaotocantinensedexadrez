@@ -19,7 +19,6 @@ class PageController extends Controller
     public function index()
     {
         $vencedor_semanas = VencedorSemana::all();
-        //User::where("eduardobaranowski@gmail.com", Auth::user()->email)->get();
         return view('pages.show', compact('vencedor_semanas'));
     }
 

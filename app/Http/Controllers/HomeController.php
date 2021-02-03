@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Classes\Partida;
 use App\Classes\VencedorSemana;
 use Response;
 
@@ -23,7 +24,8 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('dashboard');
+        $partidas = Partida::all();
+        return view('dashboard', compact('partidas'));
     }
 
 

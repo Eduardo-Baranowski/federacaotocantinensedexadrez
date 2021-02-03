@@ -97,7 +97,8 @@ Route::get('/diretorcon3s', function () {
 
 Route::get('/dashboard', function () {
     $vencedor_semanas = VencedorSemana::all();
-    return view('dashboard', compact('vencedor_semanas'));
+    $partidas = \App\Classes\Partida::all();
+    return view('dashboard', compact('vencedor_semanas', 'partidas'));
 })->name('dashboard');;
 
 Route::get('contact', [ContactController::class, 'index'])->name('contact');
@@ -120,6 +121,10 @@ Route::group(['prefix' => 'gerenciar', 'middleware' => 'auth'], function ()
 });
 
 Route::group(['middleware' => 'auth'], function () {
+
+    Route::get('partida', [App\Http\Controllers\PartidaController::class, 'index'])->name('pages.partida');
+
+    Route::post('storepartida', [App\Http\Controllers\PartidaController::class, 'storepartida'])->name('pages.storepartida');
 
     Route::get('notes', [App\Http\Controllers\PageController::class, 'index'])->name('pages.show');
 
