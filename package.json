@@ -24,6 +24,7 @@
         "vue-template-compiler": "^2.6.10"
     },
     "dependencies": {
+        "@mliebelt/pgn-viewer": "^1.4.3",
         "pdfobject": "^2.2.4"
     }
 }

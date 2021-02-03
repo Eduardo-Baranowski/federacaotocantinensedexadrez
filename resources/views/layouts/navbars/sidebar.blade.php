@@ -37,6 +37,13 @@
                 </div>
             </li>
 
+            <li @if ($pageSlug ?? '' == 'partida') class="active " @endif>
+                <a href="{{ route('pages.partida')  }}">
+                    <i class="tim-icons icon-puzzle-10"></i>
+                    <p>{{ __('Cadastro de Partida') }}</p>
+                </a>
+            </li>
+
             <li @if ($pageSlug ?? '' == 'links') class="active " @endif>
                 <a href="{{ route('links')  }}">
                     <i class="tim-icons icon-link-72"></i>
