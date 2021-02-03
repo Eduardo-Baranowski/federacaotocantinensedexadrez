@@ -36,6 +36,7 @@
                     </ul>
                 </div>
             </li>
+
             <li @if ($pageSlug ?? '' == 'links') class="active " @endif>
                 <a href="{{ route('links')  }}">
                     <i class="tim-icons icon-link-72"></i>

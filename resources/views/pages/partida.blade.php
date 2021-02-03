@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.app', ['page' => __('Cadastro de Partida'), 'pageSlug' => 'partida'])
 
 @section('content')
     <div class="row">
@@ -71,39 +71,5 @@
             </div>
         </div>
 
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-md-7 mr-auto">
-
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
-
-                    @forelse ($partidas as $partida)
-                        <div class="card mt-2">
-                            <div class="px-4 pt-4">
-                                <h5 class="float-left">
-                                    <b>{{ $partida->titulo}}</b>
-                                </h5>
-                                <div class="float-right">
-                                    <a href="{{ route('pages.edit', $partida->id ) }}" class="btn btn-sm btn-outline-primary">Editar</a>
-                                    <a href="{{ route('pages.delete', $partida->id ) }}" class="btn btn-sm btn-outline-danger">Deletar</a>
-                                </div>
-                            </div>
-                            <div class="card-body">
-                                <p class="card-title">{{ $partida->negras }}</p>
-                                <div class="card-text">{!! $partida->texto !!}</div>
-                            </div>
-                        </div>
-                    @empty
-                        <div class="alert alert-info">
-                            Não foram encontradas anotações.
-                        </div>
-                    @endforelse
-                </div>
-            </div>
-        </div>
     </div>
 @endsection
