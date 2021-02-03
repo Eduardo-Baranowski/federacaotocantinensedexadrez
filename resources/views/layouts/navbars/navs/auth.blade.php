@@ -39,7 +39,7 @@
                 </li>
                 <li class="nav-item ">
                     <a href="{{ route('pages.partida') }}" class="nav-link">
-                        {{ __('Cadastro de Partida') }}
+                        {{ __('Partidas') }}
                     </a>
                 </li>
                 <li class="nav-item ">

@@ -126,6 +126,8 @@ Route::group(['middleware' => 'auth'], function () {
 
     Route::post('storepartida', [App\Http\Controllers\PartidaController::class, 'storepartida'])->name('pages.storepartida');
 
+    Route::get('/{partida}/delete', [App\Http\Controllers\PartidaController::class, 'delete'])->name('pages.delete');
+
     Route::get('notes', [App\Http\Controllers\PageController::class, 'index'])->name('pages.show');
 
     Route::post('store', [App\Http\Controllers\PageController::class, 'store'])->name('pages.store');

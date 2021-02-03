@@ -18,5 +18,6 @@ class Partida extends Model
         'resultado',
         'link',
         'resultado',
+        'pgn',
     ];
 }

@@ -1,0 +1,72 @@
+{
+  "_from": "@mliebelt/pgn-viewer@^1.4.3",
+  "_id": "@mliebelt/pgn-viewer@1.4.3",
+  "_inBundle": false,
+  "_integrity": "sha512-kHPFGTAafj4Jpu69xiBahcXHmeY+cctT3b3vYqt1zC/zL11tKNdhQbcwsz2erRWXHA9RS8MhvYWAm2uiK9JM+A==",
+  "_location": "/@mliebelt/pgn-viewer",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "range",
+    "registry": true,
+    "raw": "@mliebelt/pgn-viewer@^1.4.3",
+    "name": "@mliebelt/pgn-viewer",
+    "escapedName": "@mliebelt%2fpgn-viewer",
+    "scope": "@mliebelt",
+    "rawSpec": "^1.4.3",
+    "saveSpec": null,
+    "fetchSpec": "^1.4.3"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/@mliebelt/pgn-viewer/-/pgn-viewer-1.4.3.tgz",
+  "_shasum": "4d413e7fe11eb3f0ec3ac62924751b44f40ef584",
+  "_spec": "@mliebelt/pgn-viewer@^1.4.3",
+  "_where": "/run/media/ebaranowski/f0ebf9b3-921e-436f-b4c9-d50b55467a5b/Documentos/Dev/Forex2021/painel",
+  "author": {
+    "name": "mliebelt"
+  },
+  "bugs": {
+    "url": "https://github.com/mliebelt/PgnViewerJS/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "@mliebelt/pgn-reader": "^1.1.6",
+    "chessground": "^7.6.12",
+    "mousetrap": "^1.6.5",
+    "roddeh-i18n": "^1.2.0",
+    "smoothscroll-polyfill": "^0.4.4",
+    "sweetalert": "^2.1.2"
+  },
+  "deprecated": false,
+  "description": "A pgn viewer to view or edit chess games on HTML web sites.",
+  "devDependencies": {
+    "webpack-bundle-analyzer": "^3.8.0"
+  },
+  "files": [
+    "lib/pgnv-assets/**",
+    "lib/locales/**",
+    "README.md"
+  ],
+  "homepage": "https://github.com/mliebelt/PgnViewerJS#readme",
+  "keywords": [
+    "chess",
+    "pgn",
+    "viewer"
+  ],
+  "license": "Apache-2.0",
+  "main": "lib/pgnv.js",
+  "module": "modules/pgn-viewer/src/index.js",
+  "name": "@mliebelt/pgn-viewer",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mliebelt/PgnViewerJS.git"
+  },
+  "scripts": {
+    "build": "../../node_modules/.bin/webpack --config webpack.prod.js",
+    "gen_i18n": "node ./bin/gen-i18n.js",
+    "start": "../../node_modules/.bin/webpack-dev-server --open --config webpack.dev.js"
+  },
+  "version": "1.4.3"
+}

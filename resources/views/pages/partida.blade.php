@@ -59,6 +59,13 @@
                                    placeholder="resultado">
                         </div>
                         <div class="form-group">
+                            @php( $field = 'pgn' )
+                            <label for="{{ $field }}">PGN</label>
+                            <input type="text" class="form-control @error($field) is-invalid @enderror"
+                                   value="{{ old( $field ) }}" id="{{ $field }}" name="{{ $field }}"
+                                   placeholder="pgn">
+                        </div>
+                        <div class="form-group">
                             @php( $field = 'link' )
                             <label for="{{ $field }}">Link</label>
                             <input type="text" class="form-control @error($field) is-invalid @enderror"
@@ -70,5 +77,42 @@
                     </form>
             </div>
         </div>
+
+        @if (Auth::user()->name == 'Eduardo Baranowski')
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-7 mr-auto">
+
+                    @if (session('status'))
+                        <div class="alert alert-success" role="alert">
+                            {{ session('status') }}
+                        </div>
+                    @endif
+
+                    @forelse ($partidas as $partida)
+                        <div class="card mt-2">
+                            <div class="px-4 pt-4">
+                                <h5 class="float-left">
+                                    <b>{{ $partida->titulo}}</b>
+                                </h5>
+                                <div class="float-right">
+                                    <a href="{{ route('pages.edit', $partida->id ) }}" class="btn btn-sm btn-outline-primary">Editar</a>
+                                    <a href="{{ route('pages.delete', $partida->id ) }}" class="btn btn-sm btn-outline-danger">Deletar</a>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <p class="card-title">{{ $partida->brancas }}</p>
+                                <div class="card-text">{!! $partida->negras !!}</div>
+                            </div>
+                        </div>
+                    @empty
+                        <div class="alert alert-info">
+                            Não foram encontradas anotações.
+                        </div>
+                    @endforelse
+                </div>
+            </div>
+        </div>
+            @endif
     </div>
 @endsection

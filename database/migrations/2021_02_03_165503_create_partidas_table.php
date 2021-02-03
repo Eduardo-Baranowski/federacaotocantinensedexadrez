@@ -21,9 +21,9 @@ class CreatePartidasTable extends Migration
             $table->string('elonegras');
             $table->string('evento');
             $table->date('data');
-            $table->string('resultado');
             $table->string('link');
             $table->string('resultado');
+            $table->text('pgn');
             $table->timestamps();
         });
     }
