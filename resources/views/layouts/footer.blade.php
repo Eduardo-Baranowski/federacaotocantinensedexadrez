@@ -22,7 +22,7 @@
                 </button>
             </li>
             <li class="nav-item">
-                <button onclick="window.open('mailto:admin@black.com')" class="btn btn-icon btn-round btn-blogger">
+                <button onclick="window.open('mailto:tocantinsftx@gmail.com')" class="btn btn-icon btn-round btn-blogger">
                     <i class="fab fa-google"></i>
                 </button>
             </li>
