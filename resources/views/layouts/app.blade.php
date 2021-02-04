@@ -22,6 +22,8 @@
         <!-- CSS -->
         <link href="{{ asset('black') }}/css/black-dashboard.css?v=1.0.0" rel="stylesheet" />
         <link href="{{ asset('black') }}/css/theme.css" rel="stylesheet" />
+        <script>__globalCustomDomain = 'public/lib/pgnv.js';</script>
+        <script src="public/lib/pgnv.js" type="text/javascript"></script>
     </head>
     <body class="{{ $class ?? '' }}">
         @auth()

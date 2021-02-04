@@ -48,6 +48,11 @@
                     </a>
                 </li>
                 <li class="nav-item ">
+                    <a href="{{ route('transparencia') }}" class="nav-link">
+                        {{ __('Transparência') }}
+                    </a>
+                </li>
+                <li class="nav-item ">
                     <a href="{{ route('diretoria') }}" class="nav-link">
                         {{ __('Diretoria') }}
                     </a>

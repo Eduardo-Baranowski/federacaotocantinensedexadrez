@@ -78,6 +78,7 @@
             </div>
         </div>
 
+
         @if (Auth::user()->name == 'Eduardo Baranowski')
         <div class="container">
             <div class="row justify-content-center">

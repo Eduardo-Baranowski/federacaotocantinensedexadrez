@@ -56,6 +56,31 @@
                     <p>{{ __('Calendário') }}</p>
                 </a>
             </li>
+            <li>
+                <a data-toggle="collapse" href="#transparencia" aria-expanded="true">
+                    <i class="tim-icons icon-bank" ></i>
+                    <span class="nav-link-text" >{{ __('Transparência') }}</span>
+                    <b class="caret mt-1"></b>
+                </a>
+
+                <div class="collapse" id="transparencia">
+                    <ul class="nav pl-4">
+
+                        <li @if ($pageSlug ?? '' == 'conta') class="active " @endif>
+                            <a href="{{ route('pages.conta')  }}">
+                                <i class="tim-icons icon-money-coins"></i>
+                                <p>{{ __('Cadastro de Gasto') }}</p>
+                            </a>
+                        </li>
+                        <li @if ($pageSlug ?? '' == 'transparencia') class="active " @endif>
+                            <a href="{{ route('transparencia')  }}">
+                                <i class="tim-icons icon-bullet-list-67"></i>
+                                <p>{{ __('Transparência') }}</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
             <li @if ($pageSlug ?? '' == 'profile') class="active " @endif>
                 <a href="{{ route('profile.edit')  }}">
                     <i class="tim-icons icon-single-02"></i>

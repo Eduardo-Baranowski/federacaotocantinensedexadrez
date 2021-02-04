@@ -101,6 +101,11 @@ Route::get('/dashboard', function () {
     return view('dashboard', compact('vencedor_semanas', 'partidas'));
 })->name('dashboard');;
 
+Route::get('/transparencia', function () {
+    $contas = \App\Classes\Conta::all();
+    return view('transparencia', compact('contas'));
+})->name('transparencia');;
+
 Route::get('contact', [ContactController::class, 'index'])->name('contact');
 
 Route::post('send', [ContactController::class, 'send'])->name('contact.send');
@@ -121,6 +126,12 @@ Route::group(['prefix' => 'gerenciar', 'middleware' => 'auth'], function ()
 });
 
 Route::group(['middleware' => 'auth'], function () {
+
+    Route::get('conta', [App\Http\Controllers\ContaController::class, 'index'])->name('pages.conta');
+
+    Route::post('storeconta', [App\Http\Controllers\ContaController::class, 'storeconta'])->name('pages.storeconta');
+
+    Route::get('/{conta}/delete', [App\Http\Controllers\ContaController::class, 'delete'])->name('pages.delete');
 
     Route::get('partida', [App\Http\Controllers\PartidaController::class, 'index'])->name('pages.partida');
 

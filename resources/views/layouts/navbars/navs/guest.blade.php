@@ -48,6 +48,11 @@
                     </a>
                 </li>
                 <li class="nav-item ">
+                    <a href="{{ route('transparencia') }}" class="nav-link">
+                        <i class="tim-icons icon-money-coins"></i> {{ __('Transparência') }}
+                    </a>
+                </li>
+                <li class="nav-item ">
                     <a href="{{ route('register') }}" class="nav-link">
                         <i class="tim-icons icon-laptop"></i> {{ __('Registro') }}
                     </a>
