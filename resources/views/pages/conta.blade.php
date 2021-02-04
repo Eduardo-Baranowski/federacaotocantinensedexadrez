@@ -3,7 +3,7 @@
 @section('content')
     <div class="row">
 
-        @if (Auth::user()->email == 'eduardobaranowski@gmail.com')
+        @if (Auth::user()->email == 'euzamarviana@gmail.com')
 
 
         <div class="col-md-7 mr-auto">
