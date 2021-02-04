@@ -17,7 +17,7 @@
             </div>
             <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
               <div class="font-icon-detail">
-                  <img class="featurette-image img-fluid mx-auto" src="{{ asset('black') }}/img/default-avatar.png"  width="100" height="100"  alt="Generic placeholder image">
+                  <img class="featurette-image img-fluid mx-auto" src="{{ asset('black') }}/img/luciano.jpeg"  width="100" height="100"  alt="Generic placeholder image">
                 <p>Vice: Luciano </p>
               </div>
             </div>
@@ -29,7 +29,7 @@
             </div>
             <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
               <div class="font-icon-detail">
-                  <a href="{{ route('diretortes') }}"><img class="featurette-image img-fluid mx-auto" src="{{ asset('black') }}/img/default-avatar.png"  width="100" height="100"  alt="Generic placeholder image"></a>
+                  <a href="{{ route('diretortes') }}"><img class="featurette-image img-fluid mx-auto" src="{{ asset('black') }}/img/zamar.jpeg"  width="100" height="100"  alt="Generic placeholder image"></a>
                 <p>Diretor Tesoureiro e Patrimônio: Euzamar </p>
               </div>
             </div>
@@ -53,7 +53,7 @@
             </div>
             <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
               <div class="font-icon-detail">
-                  <a href="{{ route('diretorcon1') }}"><img class="featurette-image img-fluid mx-auto" src="{{ asset('black') }}/img/default-avatar.png"  width="100" height="100"  alt="Generic placeholder image"></a>
+                  <a href="{{ route('diretorcon1') }}"><img class="featurette-image img-fluid mx-auto" src="{{ asset('black') }}/img/eriberto.jpeg"  width="100" height="100"  alt="Generic placeholder image"></a>
                 <p>Conselheiro Fiscal: Eriberto Nascimento</p>
               </div>
             </div>
@@ -65,13 +65,13 @@
             </div>
             <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
               <div class="font-icon-detail">
-                  <a href="{{ route('diretorcon3') }}"><img class="featurette-image img-fluid mx-auto" src="{{ asset('black') }}/img/default-avatar.png"  width="100" height="100"  alt="Generic placeholder image"></a>
+                  <a href="{{ route('diretorcon3') }}"><img class="featurette-image img-fluid mx-auto" src="{{ asset('black') }}/img/jailson.jpeg"  width="100" height="100"  alt="Generic placeholder image"></a>
                 <p>Conselheiro Fiscal: Jailson Sousa</p>
               </div>
             </div>
             <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
               <div class="font-icon-detail">
-                  <a href="{{ route('diretorcon1s') }}"><img class="featurette-image img-fluid mx-auto" src="{{ asset('black') }}/img/default-avatar.png"  width="100" height="100"  alt="Generic placeholder image"></a>
+                  <a href="{{ route('diretorcon1s') }}"><img class="featurette-image img-fluid mx-auto" src="{{ asset('black') }}/img/gilson.jpeg"  width="100" height="100"  alt="Generic placeholder image"></a>
                 <p>Conselheiro Fiscal: Gilson Oliveira</p>
               </div>
             </div>
@@ -83,7 +83,7 @@
             </div>
             <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
               <div class="font-icon-detail">
-                  <a href="{{ route('diretorcon3s') }}"><img class="featurette-image img-fluid mx-auto" src="{{ asset('black') }}/img/default-avatar.png"  width="100" height="100"  alt="Generic placeholder image"></a>
+                  <a href="{{ route('diretorcon3s') }}"><img class="featurette-image img-fluid mx-auto" src="{{ asset('black') }}/img/filipe.jpeg"  width="100" height="100"  alt="Generic placeholder image"></a>
                 <p>Conselheiro Fiscal: Filipe Carvalho</p>
               </div>
             </div>
