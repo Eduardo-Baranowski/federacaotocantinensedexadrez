@@ -137,30 +137,21 @@ Route::group(['middleware' => 'auth'], function () {
 
     Route::post('storepartida', [App\Http\Controllers\PartidaController::class, 'storepartida'])->name('pages.storepartida');
 
-    Route::get('/{partida}/delete', [App\Http\Controllers\PartidaController::class, 'delete'])->name('pages.delete');
+    Route::get('/{partida}/deletepart', [App\Http\Controllers\PartidaController::class, 'delete'])->name('pages.deletepart');
 
     Route::get('notes', [App\Http\Controllers\PageController::class, 'index'])->name('pages.show');
 
     Route::post('store', [App\Http\Controllers\PageController::class, 'store'])->name('pages.store');
 
+    Route::get('/{vencedor}/deletevenc', [App\Http\Controllers\PageController::class, 'delete'])->name('pages.deletevenc');
+
     Route::get('/{id}/edit', [App\Http\Controllers\PageController::class, 'edit'])->name('pages.edit');
 
     Route::post('/{id}', [App\Http\Controllers\PageController::class, 'update'])->name('pages.update');
 
-    Route::get('/{vencedor}/delete', [App\Http\Controllers\PageController::class, 'delete'])->name('pages.delete');
-
-
-    //Route::get('icons', [App\Http\Controllers\PageController::class, 'icons'])->name('pages.icons');
 
     Route::get('maps', [App\Http\Controllers\PageController::class, 'maps'])->name('pages.maps');
 
-    //Route::get('notifications', [App\Http\Controllers\PageController::class, 'notifications'])->name('pages.notifications');
-
-    //Route::get('tables', [App\Http\Controllers\PageController::class, 'tables'])->name('pages.tables');
-
-    //Route::get('typography', [App\Http\Controllers\PageController::class, 'typography'])->name('pages.typography');
-
-    //Route::get('upgrade', [App\Http\Controllers\PageController::class, 'upgrade'])->name('pages.upgrade');
 });
 
 Route::group(['middleware' => 'auth'], function () {

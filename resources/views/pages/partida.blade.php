@@ -98,7 +98,7 @@
                                 </h5>
                                 <div class="float-right">
                                     <a href="{{ route('pages.edit', $partida->id ) }}" class="btn btn-sm btn-outline-primary">Editar</a>
-                                    <a href="{{ route('pages.delete', $partida->id ) }}" class="btn btn-sm btn-outline-danger">Deletar</a>
+                                    <a href="{{ route('pages.deletepart', $partida->id ) }}" class="btn btn-sm btn-outline-danger">Deletar</a>
                                 </div>
                             </div>
                             <div class="card-body">

@@ -12,5 +12,6 @@ class VencedorSemana extends Model
         'titulo',
         'texto',
         'descricao',
+        'imagem',
     ];
 }

@@ -7,6 +7,7 @@ use App\Classes\VencedorSemana;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Storage;
 
 class PageController extends Controller
 {
@@ -28,12 +29,28 @@ class PageController extends Controller
             'titulo' => 'required|max:255',
             'texto' => 'required',
             'descricao' => 'required|max:800',
+            //'imagem' => 'required',
         ]);
 
         $vencedor = new VencedorSemana();
 
         $vencedor->fill($request->input());
         $vencedor->save();
+
+
+        if ($request->file('imagem') && $request->file('imagem')->isValid()) {
+            // Define um aleatório para o arquivo baseado no timestamps atual
+            $name = uniqid(date('HisYmd'));
+            // Recupera a extensão do arquivo
+            $extension = $request->file('imagem')->extension();
+            // Define o nome
+            $nameFile = "{$name}.{$extension}";
+            // Faz o upload:
+            $upload = $request->file('imagem')->storeAs('imagem', $nameFile);
+            //Armazena o caminho onde a imagem está
+            $vencedor->imagem = $upload;
+            $vencedor->save();
+        }
 
         return redirect()->route('pages.show');
     }
@@ -51,56 +68,6 @@ class PageController extends Controller
     public function maps()
     {
         return view('pages.maps');
-    }
-
-    /**
-     * Display tables page
-     *
-     * @return \Illuminate\View\View
-     */
-    public function tables()
-    {
-        return view('pages.tables');
-    }
-
-    /**
-     * Display notifications page
-     *
-     * @return \Illuminate\View\View
-     */
-    public function notifications()
-    {
-        return view('pages.notifications');
-    }
-
-    /**
-     * Display rtl page
-     *
-     * @return \Illuminate\View\View
-     */
-    public function rtl()
-    {
-        return view('pages.rtl');
-    }
-
-    /**
-     * Display typography page
-     *
-     * @return \Illuminate\View\View
-     */
-    public function typography()
-    {
-        return view('pages.typography');
-    }
-
-    /**
-     * Display upgrade page
-     *
-     * @return \Illuminate\View\View
-     */
-    public function upgrade()
-    {
-        return view('pages.upgrade');
     }
 
     /**
@@ -141,12 +108,14 @@ class PageController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\VencedorSemana  $vencedor
+     * @param  \App\Classes\VencedorSemana  $vencedor
      * @return \Illuminate\Http\Response
      */
     public function delete(VencedorSemana $vencedor){
 
+        Storage::delete($vencedor->imagem);
         $vencedor->delete();
+
 
         return redirect()->route('pages.show');
     }

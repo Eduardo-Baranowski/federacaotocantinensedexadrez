@@ -87,7 +87,7 @@ class PartidaController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\VencedorSemana  $partida
+     * @param  \App\Partida  $partida
      * @return \Illuminate\Http\Response
      */
     public function delete(Partida $partida){

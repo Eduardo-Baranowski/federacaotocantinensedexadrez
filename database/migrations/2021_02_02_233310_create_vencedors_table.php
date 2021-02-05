@@ -18,7 +18,7 @@ class CreateVencedorsTable extends Migration
             $table->string('titulo');
             $table->text('texto')->nullable();
             $table->text('descricao')->nullable();
-            $table->integer('num_acesso')->default(0);
+            $table->text('imagem')->nullable();
             $table->timestamps();
         });
     }
