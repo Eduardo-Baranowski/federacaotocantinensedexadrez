@@ -18,6 +18,7 @@ class CreateContasTable extends Migration
             $table->string('titulo');
             $table->string('descricao');
             $table->decimal('valor');
+            $table->date('data');
             $table->timestamps();
         });
     }

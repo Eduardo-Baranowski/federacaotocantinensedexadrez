@@ -12,5 +12,6 @@ class Conta extends Model
         'titulo',
         'descricao',
         'valor',
+        'data',
     ];
 }

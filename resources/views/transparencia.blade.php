@@ -25,6 +25,7 @@
                             <div class="card-body">
                                 <p class="card-title">{{ $conta->descricao }}</p>
                                 <div class="card-text">{!! $conta->valor !!}</div>
+                                <div class="card-text">{!! $conta->data !!}</div>
                             </div>
                         </div>
                     @empty

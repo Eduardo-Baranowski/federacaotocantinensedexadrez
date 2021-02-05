@@ -27,7 +27,8 @@ class ContaController extends Controller
         $request->validate([
             'titulo' => 'required|max:255',
             'descricao' => 'required|max:255',
-            'valor' => 'required',
+            'valor' => ['required','regex:/^\d+([.]\d{1,2})?$/'],
+            'data' => 'required|max:255',
         ]);
 
         $conta = new Conta();
