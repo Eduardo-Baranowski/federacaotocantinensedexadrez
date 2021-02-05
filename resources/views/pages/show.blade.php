@@ -30,13 +30,14 @@
                         <div class="form-group">
                             @php( $field = 'texto' )
                             <label for="{{ $field }}">Texto</label>
-                            <textarea class="form-control @error($field) is-invalid @enderror" id="{{ $field }}"
-                                      name="{{ $field }}" rows="12">{{ old( $field ) }}</textarea>
+                            <input type="text" class="form-control @error($field) is-invalid @enderror"
+                                   value="{{ old( $field ) }}" id="{{ $field }}" name="{{ $field }}"
+                                   placeholder="texto">
                         </div>
 
                         <div class="form-group">
                             @php( $field = 'imagem' )
-                            <label class="tim-icons icon-image-02" for="{{ $field }}"><span><strong> Escolha uma imagem: </strong></span></label>
+                            <label for="{{ $field }}"><i class="tim-icons icon-image-02"></i><span><strong>    Escolha uma imagem: </strong></span></label>
                             <input type="file" class="form-control @error($field) is-invalid @enderror" value="{{ old( $field ) }}" id="{{ $field }}" name="{{ $field }}" accept=".png,.jpeg,.gif,.svg,.bitmap" placeholder="Imagem" required >
                         </div>
 
