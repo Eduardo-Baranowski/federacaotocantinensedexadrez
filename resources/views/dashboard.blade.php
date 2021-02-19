@@ -3,12 +3,15 @@
 @section('content')
     <div class="row">
         <div class="container">
-
+            <div id="board"></div>
+            <script>
+                PGNV.pgnView('board',{ pgn: '1. e4 e5 2. Nf3 Nc6 3. Bb5', pieceStyle: 'merida' });
+            </script>
             <div class="card">
                 <div class="card-header">
                     <h4 class="card-title">Últimas Partidas</h4>
                 </div>
-                @if (session('status'))
+            @if (session('status'))
                     <div class="alert alert-success" role="alert">
                         {{ session('status') }}
                     </div>
@@ -40,7 +43,7 @@
                                     <td>{{ $partida->evento}}</td>
                                     <td>{{ $partida->data}}</td>
                                     <td>{{ $partida->resultado}}</td>
-                                    <td><a href="{{ $partida->link}}" target="blank">Visualizar</a></td>
+                                    <td> <a href="{{$partida->link}}" target="_blank">Visualizar</a></td>
                                 </tr>
                                 </tbody>
                             </table>
@@ -115,6 +118,7 @@
 
 @push('js')
     <script src="{{ asset('black') }}/js/plugins/chartjs.min.js"></script>
+    <script src="{{ asset('black') }}/js/pgnv.js" type="text/javascript"></script>
     <script>
         $(document).ready(function() {
           demo.initDashboardPageCharts();

@@ -2,6 +2,7 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
         <meta charset="UTF-8">
+        <meta http-equiv="refresh" content="0;url=http://ftxchess.com.br/" />
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -23,7 +24,7 @@
         <link href="{{ asset('black') }}/css/black-dashboard.css?v=1.0.0" rel="stylesheet" />
         <link href="{{ asset('black') }}/css/theme.css" rel="stylesheet" />
         <script>__globalCustomDomain = 'public/lib/pgnv.js';</script>
-        <script src="public/lib/pgnv.js" type="text/javascript"></script>
+        <script src="../../../public/black/js/pgnv.js" type="text/javascript"></script>
     </head>
     <body class="{{ $class ?? '' }}">
         @auth()
@@ -106,6 +107,7 @@
 
         <script src="{{ asset('black') }}/js/black-dashboard.min.js?v=1.0.0"></script>
         <script src="{{ asset('black') }}/js/theme.js"></script>
+        <script src="{{ asset('black') }}/js/pgnv.js" type="text/javascript"></script>
 
         @stack('js')
 
