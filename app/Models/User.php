@@ -20,6 +20,18 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'ratting',
+        'rattingchess',
+        'nickchess',
+        'nicklichess',
+        'rattingchess',
+        'rattingchessbullet',
+        'rattingchessrapido',
+        'rattingchesspensado',
+        'rattinglichess',
+        'rattinglichessbullet',
+        'rattinglichessrapido',
+        'rattinglichesspensado',
     ];
 
     /**

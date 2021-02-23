@@ -33,6 +33,18 @@
                                 <p>{{ __('Diretoria') }}</p>
                             </a>
                         </li>
+                        <li @if ($pageSlug ?? '' == 'apoio') class="active " @endif>
+                            <a href="{{ route('apoio')  }}">
+                                <i class="tim-icons icon-bank"></i>
+                                <p>{{ __('Apoiadores') }}</p>
+                            </a>
+                        </li>
+                        <li @if ($pageSlug ?? '' == 'ratting') class="active " @endif>
+                            <a href="{{ route('ratting')  }}">
+                                <i class="tim-icons icon-paper"></i>
+                                <p>{{ __('Lista de Ratting') }}</p>
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </li>
@@ -41,6 +53,13 @@
                 <a href="{{ route('pages.partida')  }}">
                     <i class="tim-icons icon-puzzle-10"></i>
                     <p>{{ __('Cadastro de Partida') }}</p>
+                </a>
+            </li>
+
+            <li @if ($pageSlug ?? '' == 'composicao') class="active " @endif>
+                <a href="{{ route('pages.composicao')  }}">
+                    <i class="tim-icons icon-puzzle-10"></i>
+                    <p>{{ __('Cadastro de Composição') }}</p>
                 </a>
             </li>
 

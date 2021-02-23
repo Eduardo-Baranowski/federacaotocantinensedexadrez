@@ -1,5 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-absolute navbar-transparent fixed-top">
-    <div class="container-fluid">
+<nav class="navbar navbar-expand-lg navbar-absolute navbar-transparent">
         <div class="navbar-wrapper">
             <div class="navbar-toggle d-inline">
                 <button type="button" class="navbar-toggler">
@@ -19,7 +18,7 @@
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
                     <a href="{{ route('dashboard') }}" class="nav-link text-primary">
-                        <i class="tim-icons icon-minimal-left"></i> {{ __('Informações e Eventos') }}
+                        <i class="tim-icons icon-minimal-left"></i> {{ __('Novidades') }}
                     </a>
                 </li>
                 <li class="nav-item ">
@@ -32,21 +31,50 @@
                         <i class="tim-icons icon-calendar-60"></i> {{ __('Calendário') }}
                     </a>
                 </li>
+                    <li class="dropdown nav-item">
+                        <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
+                            <span class="nav-link-text" ><i class="tim-icons icon-components"></i> {{ __('Diretoria') }}</span>
+                            <b class="caret d-none d-lg-block d-xl-block"></b>
+                            <p class="d-lg-none"></p>
+                        </a>
+                        <ul class="dropdown-menu dropdown-navbar">
+                            <li class="nav-link">
+                                <a href="{{ route('diretoria') }}" class="nav-item dropdown-item">{{ __('Diretoria') }}</a>
+                            </li>
+                            <li class="dropdown-divider"></li>
+                            <li class="nav-link">
+                                <a href="{{ route('apoio') }}" class="nav-item dropdown-item">{{ __('Apoio') }}</a>
+                            </li>
+
+                            <li class="dropdown-divider"></li>
+                            <li class="nav-link">
+                                <a href="{{ route('estatuto') }}" class="nav-item dropdown-item">{{ __('Estatuto') }}</a>
+                            </li>
+                        </ul>
+                    </li>
                 <li class="nav-item ">
-                    <a href="{{ route('links') }}" class="nav-link">
-                        <i class="tim-icons icon-link-72"></i> {{ __('Links') }}
+                    <a href="{{ route('ratting') }}" class="nav-link">
+                        <i class="tim-icons icon-paper"></i> {{ __('Rattings') }}
                     </a>
                 </li>
-                <li class="nav-item ">
-                    <a href="{{ route('diretoria') }}" class="nav-link">
-                        <i class="tim-icons icon-components"></i> {{ __('Diretoria') }}
+
+                <li class="dropdown nav-item">
+                    <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
+                        <span class="nav-link-text" ><i class="tim-icons icon-book-bookmark"></i> {{ __('Materiais') }}</span>
+                        <b class="caret d-none d-lg-block d-xl-block"></b>
+                        <p class="d-lg-none"></p>
                     </a>
+                    <ul class="dropdown-menu dropdown-navbar">
+                        <li class="nav-link">
+                            <a href="{{ route('composicaoshow') }}" class="nav-item dropdown-item">{{ __('Composições') }}</a>
+                        </li>
+                        <li class="dropdown-divider"></li>
+                        <li class="nav-link">
+                            <a href="{{ route('links') }}" class="nav-item dropdown-item">{{ __('Links') }}</a>
+                        </li>
+                    </ul>
                 </li>
-                <li class="nav-item ">
-                    <a href="{{ route('estatuto') }}" class="nav-link">
-                        <i class="tim-icons icon-paper"></i> {{ __('Estatuto') }}
-                    </a>
-                </li>
+
                 <li class="nav-item ">
                     <a href="{{ route('transparencia') }}" class="nav-link">
                         <i class="tim-icons icon-money-coins"></i> {{ __('Transparência') }}
@@ -69,5 +97,4 @@
                 </li>
             </ul>
         </div>
-    </div>
 </nav>

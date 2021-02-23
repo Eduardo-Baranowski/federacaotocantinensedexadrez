@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\ComposicaoController;
 
 /*
 |--------------------------------------------------------------------------
@@ -101,10 +102,24 @@ Route::get('/dashboard', function () {
     return view('dashboard', compact('vencedor_semanas', 'partidas'));
 })->name('dashboard');;
 
+Route::get('/ratting', function () {
+    $users = \App\Models\User::all();
+    return view('ratting', compact('users'));
+})->name('ratting');;
+
+Route::get('/apoio', function () {
+    return view('apoio');
+})->name('apoio');;
+
 Route::get('/transparencia', function () {
     $contas = \App\Classes\Conta::all();
     return view('transparencia', compact('contas'));
 })->name('transparencia');;
+
+Route::get('/composicaoshow', function () {
+    $composicaos = \App\Classes\Composicao::all();
+    return view('composicaoshow', compact('composicaos'));
+})->name('composicaoshow');;
 
 Route::get('contact', [ContactController::class, 'index'])->name('contact');
 
@@ -127,6 +142,18 @@ Route::group(['prefix' => 'gerenciar', 'middleware' => 'auth'], function ()
 
 Route::group(['middleware' => 'auth'], function () {
 
+    Route::get('composicao', [App\Http\Controllers\ComposicaoController::class, 'index'])->name('pages.composicao');
+
+    Route::post('storecomposicao', [App\Http\Controllers\ComposicaoController::class, 'storecomposicao'])->name('pages.storecomposicao');
+
+    Route::get('/{composicao}/deletecomposicao', [App\Http\Controllers\ComposicaoController::class, 'deletec'])->name('pages.deletecomposicao');
+
+    Route::get('/{id}/edit', [App\Http\Controllers\ComposicaoController::class, 'edit'])->name('pages.edit');
+
+    Route::post('/{id}', [App\Http\Controllers\ComposicaoController::class, 'update'])->name('pages.update');
+
+
+
     Route::get('conta', [App\Http\Controllers\ContaController::class, 'index'])->name('pages.conta');
 
     Route::post('storeconta', [App\Http\Controllers\ContaController::class, 'storeconta'])->name('pages.storeconta');
@@ -148,7 +175,6 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/{id}/edit', [App\Http\Controllers\PageController::class, 'edit'])->name('pages.edit');
 
     Route::post('/{id}', [App\Http\Controllers\PageController::class, 'update'])->name('pages.update');
-
 
     Route::get('maps', [App\Http\Controllers\PageController::class, 'maps'])->name('pages.maps');
 

@@ -40,7 +40,6 @@
         <div class="col-md-7 mr-auto">
             <div class="card card-register card-white">
                 <div class="card-header">
-                    <img class="card-img" src="{{ asset('black') }}/img/card-primary.png" alt="Card image">
                     <h4 class="card-title">{{ __('Registro') }}</h4>
                 </div>
                 <form class="form" method="post" action="{{ route('register') }}">
@@ -64,6 +63,99 @@
                             </div>
                             <input type="email" name="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" placeholder="{{ __('Email') }}">
                             @include('alerts.feedback', ['field' => 'email'])
+                        </div>
+
+                        <div class="input-group{{ $errors->has('nickchess') ? ' has-danger' : '' }}">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">
+                                    <i class="tim-icons icon-single-copy-04"></i>
+                                </div>
+                            </div>
+                            <input type="text" name="nickchess" class="form-control{{ $errors->has('nickchess') ? ' is-invalid' : '' }}" placeholder="{{ __('Nick do Chess.com') }}">
+                            @include('alerts.feedback', ['field' => 'nickchess'])
+                        </div>
+
+                        <div class="input-group{{ $errors->has('nicklichess') ? ' has-danger' : '' }}">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">
+                                    <i class="tim-icons icon-single-copy-04"></i>
+                                </div>
+                            </div>
+                            <input type="text" name="nicklichess" class="form-control{{ $errors->has('nicklichess') ? ' is-invalid' : '' }}" placeholder="{{ __('Nick do Lichess') }}">
+                            @include('alerts.feedback', ['field' => 'nicklichess'])
+                        </div>
+
+                        <div class="input-group{{ $errors->has('rattingchess') ? ' has-danger' : '' }}">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">
+                                    <i class="tim-icons icon-chart-bar-32"></i>
+                                </div>
+                            </div>
+                            <input type="number" name="rattingchess" class="form-control{{ $errors->has('rattingchess') ? ' is-invalid' : '' }}" placeholder="{{ __('Ratting Chess.com de blitz') }}">
+                            @include('alerts.feedback', ['field' => 'rattingchess'])
+                        </div>
+                        <div class="input-group{{ $errors->has('rattingchessbullet') ? ' has-danger' : '' }}">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">
+                                    <i class="tim-icons icon-chart-bar-32"></i>
+                                </div>
+                            </div>
+                            <input type="number" name="rattingchessbullet" class="form-control{{ $errors->has('rattingchessbullet') ? ' is-invalid' : '' }}" placeholder="{{ __('Ratting Chess.com bullet') }}">
+                            @include('alerts.feedback', ['field' => 'rattingchessbullet'])
+                        </div>
+                        <div class="input-group{{ $errors->has('rattingchessrapido') ? ' has-danger' : '' }}">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">
+                                    <i class="tim-icons icon-chart-bar-32"></i>
+                                </div>
+                            </div>
+                            <input type="number" name="rattingchessrapido" class="form-control{{ $errors->has('rattingchessrapido') ? ' is-invalid' : '' }}" placeholder="{{ __('Ratting Chess.com rapido') }}">
+                            @include('alerts.feedback', ['field' => 'rattingchessrapido'])
+                        </div>
+                        <div class="input-group{{ $errors->has('rattingchesspensado') ? ' has-danger' : '' }}">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">
+                                    <i class="tim-icons icon-chart-bar-32"></i>
+                                </div>
+                            </div>
+                            <input type="number" name="rattingchesspensado" class="form-control{{ $errors->has('rattingchesspensado') ? ' is-invalid' : '' }}" placeholder="{{ __('Ratting Chess.com pensado') }}">
+                            @include('alerts.feedback', ['field' => 'rattingchesspensado'])
+                        </div>
+                        <div class="input-group{{ $errors->has('rattinglichess') ? ' has-danger' : '' }}">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">
+                                    <i class="tim-icons icon-chart-bar-32"></i>
+                                </div>
+                            </div>
+                            <input type="number" name="rattinglichess" class="form-control{{ $errors->has('rattinglichess') ? ' is-invalid' : '' }}" placeholder="{{ __('Ratting Lichess de blitz') }}">
+                            @include('alerts.feedback', ['field' => 'rattinglichess'])
+                        </div>
+                        <div class="input-group{{ $errors->has('rattinglichessbullet') ? ' has-danger' : '' }}">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">
+                                    <i class="tim-icons icon-chart-bar-32"></i>
+                                </div>
+                            </div>
+                            <input type="number" name="rattinglichessbullet" class="form-control{{ $errors->has('rattinglichessbullet') ? ' is-invalid' : '' }}" placeholder="{{ __('Ratting Lichess bullet') }}">
+                            @include('alerts.feedback', ['field' => 'rattinglichessbullet'])
+                        </div>
+                        <div class="input-group{{ $errors->has('rattinglichessrapido') ? ' has-danger' : '' }}">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">
+                                    <i class="tim-icons icon-chart-bar-32"></i>
+                                </div>
+                            </div>
+                            <input type="number" name="rattinglichessrapido" class="form-control{{ $errors->has('rattinglichessrapido') ? ' is-invalid' : '' }}" placeholder="{{ __('Ratting Lichess rápido') }}">
+                            @include('alerts.feedback', ['field' => 'rattinglichessrapido'])
+                        </div>
+                        <div class="input-group{{ $errors->has('rattinglichesspensado') ? ' has-danger' : '' }}">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">
+                                    <i class="tim-icons icon-chart-bar-32"></i>
+                                </div>
+                            </div>
+                            <input type="number" name="rattinglichesspensado" class="form-control{{ $errors->has('rattinglichesspensado') ? ' is-invalid' : '' }}" placeholder="{{ __('Ratting Chess.com pensado') }}">
+                            @include('alerts.feedback', ['field' => 'rattinglichesspensado'])
                         </div>
                         <div class="input-group{{ $errors->has('password') ? ' has-danger' : '' }}">
                             <div class="input-group-prepend">

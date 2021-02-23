@@ -39,7 +39,9 @@ return [
     |
     */
 
-    'debug' => (bool) env('APP_DEBUG', false),
+    'debug' => (bool) env('APP_DEBUG', true),
+    //'debug' => (function_exists('env')) ? env('APP_DEBUG', true) : true,
+
 
     /*
     |--------------------------------------------------------------------------

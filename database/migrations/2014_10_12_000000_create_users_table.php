@@ -19,6 +19,17 @@ class CreateUsersTable extends Migration
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
+            $table->string('nickchess');
+            $table->string('nicklichess');
+            $table->integer('ratting')->default(1800);
+            $table->integer('rattingchess')->nullable();
+            $table->integer('rattingchessbullet')->nullable();
+            $table->integer('rattingchessrapido')->nullable();
+            $table->integer('rattingchesspensado')->nullable();
+            $table->integer('rattinglichess')->nullable();
+            $table->integer('rattinglichessbullet')->nullable();
+            $table->integer('rattinglichessrapido')->nullable();
+            $table->integer('rattinglichesspensado')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });

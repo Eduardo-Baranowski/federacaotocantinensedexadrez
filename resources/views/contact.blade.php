@@ -39,7 +39,7 @@
         <div class="col-md-7 mr-auto">
             <div class="card card-register card-white">
                 <div class="card-header">
-                    <img class="card-img" src="{{ asset('black') }}/img/card-primary.png" alt="Card image">
+                    <!--<img class="card-img" src="{{ asset('black') }}/img/card-primary.png" alt="Card image">-->
                     <h4 class="card-title">{{ __('Contato') }}</h4>
                 </div>
                 @include('partials.messages')

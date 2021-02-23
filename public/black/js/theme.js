@@ -727,7 +727,7 @@ demo = {
 
     $.notify({
       icon: "tim-icons icon-bell-55",
-        message: "Clique no link para a <b><a href='https://lichess.org/team/xadrez-suico' target='_blank'><p class='text-dark'>Equipe do Lichess</p></a></b>"
+        message: "Clique no link para a <b><a href='https://lichess.org/team/xadrez-suico' target='_blank'><p class='text-dark'>Equipe do Lichess</p></a><a href='https://www.chess.com/club/chess-tocantins' target='_blank'><p class='text-dark'>Equipe do chess.com</p></a></b>"
 
     }, {
       type: type[color],

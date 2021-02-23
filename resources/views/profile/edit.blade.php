@@ -25,6 +25,59 @@
                                 <input type="email" name="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" placeholder="{{ __('Email address') }}" value="{{ old('email', auth()->user()->email) }}">
                                 @include('alerts.feedback', ['field' => 'email'])
                             </div>
+
+                            <div class="form-group{{ $errors->has('nickchess') ? ' has-danger' : '' }}">
+                                <label>{{ __('Nick do Chess.com') }}</label>
+                                <input type="text" name="nickchess" class="form-control{{ $errors->has('nickchess') ? ' is-invalid' : '' }}" placeholder="{{ __('Nick do Chess.com') }}" value="{{ old('nickchess', auth()->user()->nickchess) }}">
+                                @include('alerts.feedback', ['field' => 'nickchess'])
+                            </div>
+                        <div class="form-group{{ $errors->has('nicklichess') ? ' has-danger' : '' }}">
+                            <label>{{ __('Nick do Lichess') }}</label>
+                            <input type="text" name="nicklichess" class="form-control{{ $errors->has('nicklichess') ? ' is-invalid' : '' }}" placeholder="{{ __('Nick do Lichess') }}" value="{{ old('nicklichess', auth()->user()->nicklichess) }}">
+                            @include('alerts.feedback', ['field' => 'nicklichess'])
+                        </div>
+                        <div class="form-group{{ $errors->has('rattingchess') ? ' has-danger' : '' }}">
+                            <label>{{ __('Ratting do Chess.com de Blitz') }}</label>
+                            <input type="number" name="rattingchess" class="form-control{{ $errors->has('rattingchess') ? ' is-invalid' : '' }}" placeholder="{{ __('Ratting do Chess.com de Blitz') }}" value="{{ old('rattingchess', auth()->user()->rattingchess) }}">
+                            @include('alerts.feedback', ['field' => 'rattingchess'])
+                        </div>
+                        <div class="form-group{{ $errors->has('rattingchessbullet') ? ' has-danger' : '' }}">
+                            <label>{{ __('Ratting do Chess.com de Bullet') }}</label>
+                            <input type="number" name="rattingchessbullet" class="form-control{{ $errors->has('rattingchess') ? ' is-invalid' : '' }}" placeholder="{{ __('Ratting do Chess.com de bullet') }}" value="{{ old('rattingchessbullet', auth()->user()->rattingchessbullet) }}">
+                            @include('alerts.feedback', ['field' => 'rattingchessbullet'])
+                        </div>
+                        <div class="form-group{{ $errors->has('rattingchessrapido') ? ' has-danger' : '' }}">
+                            <label>{{ __('Ratting do Chess.com de Rápidas') }}</label>
+                            <input type="number" name="rattingchessrapido" class="form-control{{ $errors->has('rattingchess') ? ' is-invalid' : '' }}" placeholder="{{ __('Ratting do Chess.com de Rápidas') }}" value="{{ old('rattingchessrapido', auth()->user()->rattingchessrapido) }}">
+                            @include('alerts.feedback', ['field' => 'rattingchessrapido'])
+                        </div>
+                        <div class="form-group{{ $errors->has('rattingchesspensado') ? ' has-danger' : '' }}">
+                            <label>{{ __('Ratting do Chess.com de Pensado') }}</label>
+                            <input type="number" name="rattingchesspensado" class="form-control{{ $errors->has('rattingchess') ? ' is-invalid' : '' }}" placeholder="{{ __('Ratting do Chess.com de Pensado') }}" value="{{ old('rattingchesspensado', auth()->user()->rattingchesspensado) }}">
+                            @include('alerts.feedback', ['field' => 'rattingchesspensado'])
+                        </div>
+
+                        <div class="form-group{{ $errors->has('rattinglichess') ? ' has-danger' : '' }}">
+                            <label>{{ __('Ratting do Lichess de Blitz') }}</label>
+                            <input type="number" name="rattinglichess" class="form-control{{ $errors->has('rattinglichess') ? ' is-invalid' : '' }}" placeholder="{{ __('Ratting do Lichess de Blitz') }}" value="{{ old('rattinglichess', auth()->user()->rattinglichess) }}">
+                            @include('alerts.feedback', ['field' => 'rattinglichess'])
+                        </div>
+                        <div class="form-group{{ $errors->has('rattinglichessbullet') ? ' has-danger' : '' }}">
+                            <label>{{ __('Ratting do Lichess de Bullet') }}</label>
+                            <input type="number" name="rattinglichessbullet" class="form-control{{ $errors->has('rattinglichessbullet') ? ' is-invalid' : '' }}" placeholder="{{ __('Ratting do Lichess de bullet') }}" value="{{ old('rattinglichessbullet', auth()->user()->rattinglichessbullet) }}">
+                            @include('alerts.feedback', ['field' => 'rattinglichessbullet'])
+                        </div>
+                        <div class="form-group{{ $errors->has('rattinglichessrapido') ? ' has-danger' : '' }}">
+                            <label>{{ __('Ratting do Lichess de Rápidas') }}</label>
+                            <input type="number" name="rattinglichessrapido" class="form-control{{ $errors->has('rattinglichessrapido') ? ' is-invalid' : '' }}" placeholder="{{ __('Ratting do Lichess de Rápidas') }}" value="{{ old('rattinglichessrapido', auth()->user()->rattinglichessrapido) }}">
+                            @include('alerts.feedback', ['field' => 'rattinglichessrapido'])
+                        </div>
+                        <div class="form-group{{ $errors->has('rattinglichesspensado') ? ' has-danger' : '' }}">
+                            <label>{{ __('Ratting do Lichess de Pensado') }}</label>
+                            <input type="number" name="rattinglichesspensado" class="form-control{{ $errors->has('rattinglichesspensado') ? ' is-invalid' : '' }}" placeholder="{{ __('Ratting do Lichess de Pensado') }}" value="{{ old('rattinglichesspensado', auth()->user()->rattinglichesspensado) }}">
+                            @include('alerts.feedback', ['field' => 'rattinglichesspensado'])
+                        </div>
+
                     </div>
                     <div class="card-footer">
                         <button type="submit" class="btn btn-fill btn-primary">{{ __('Save') }}</button>

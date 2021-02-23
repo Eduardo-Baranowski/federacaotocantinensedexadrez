@@ -53,6 +53,16 @@ class RegisterController extends Controller
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
+            'nickchess' => ['nullable', 'string', 'max:255'],
+            'nicklichess' => ['nullable', 'string', 'max:255'],
+            'rattingchess' => ['nullable'],
+            'rattingchessbullet' => ['nullable'],
+            'rattingchessrapido' => ['nullable'],
+            'rattingchesspensado' => ['nullable'],
+            'rattinglichess' => ['nullable'],
+            'rattinglichessbullet' => ['nullable'],
+            'rattinglichessrapido' => ['nullable'],
+            'rattinglichesspensado' => ['nullable'],
         ]);
     }
 
@@ -68,6 +78,17 @@ class RegisterController extends Controller
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
+            'nickchess' => $data['nickchess'],
+            'nicklichess' => $data['nicklichess'],
+            'email' => $data['email'],
+            'rattingchess' => $data['rattingchess'],
+            'rattingchessbullet' => $data['rattingchessbullet'],
+            'rattingchessrapido' => $data['rattingchessrapido'],
+            'rattingchesspensado' => $data['rattingchesspensado'],
+            'rattinglichess' => $data['rattinglichess'],
+            'rattinglichessbullet' => $data['rattinglichessbullet'],
+            'rattinglichessrapido' => $data['rattinglichessrapido'],
+            'rattinglichesspensado' => $data['rattinglichesspensado'],
         ]);
     }
 }
