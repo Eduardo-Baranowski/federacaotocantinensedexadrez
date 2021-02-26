@@ -121,6 +121,12 @@ Route::get('/composicaoshow', function () {
     return view('composicaoshow', compact('composicaos'));
 })->name('composicaoshow');;
 
+
+Route::get('/partidashow', function () {
+    $partidas = \App\Classes\Partida::all();
+    return view('partidashow', compact('partidas'));
+})->name('partidashow');;
+
 Route::get('contact', [ContactController::class, 'index'])->name('contact');
 
 Route::post('send', [ContactController::class, 'send'])->name('contact.send');
@@ -135,9 +141,39 @@ Auth::routes();
 
 Auth::routes();
 
-Route::group(['prefix' => 'gerenciar', 'middleware' => 'auth'], function ()
+Route::get('partida', [App\Http\Controllers\PartidaController::class, 'index'])->name('pages.partida');
+
+Route::post('storepartida', [App\Http\Controllers\PartidaController::class, 'storepartida'])->name('pages.storepartida');
+
+Route::get('/{partida}/deletepart', [App\Http\Controllers\PartidaController::class, 'delete'])->name('pages.deletepart');
+
+
+Route::get('conta', [App\Http\Controllers\ContaController::class, 'index'])->name('pages.conta');
+
+Route::post('storeconta', [App\Http\Controllers\ContaController::class, 'storeconta'])->name('pages.storeconta');
+
+Route::get('/{conta}/delete', [App\Http\Controllers\ContaController::class, 'delete'])->name('pages.delete');
+
+
+
+
+
+
+Route::get('notes', [App\Http\Controllers\PageController::class, 'index'])->name('pages.show');
+
+Route::post('store', [App\Http\Controllers\PageController::class, 'store'])->name('pages.store');
+
+Route::get('/{vencedor}/deletevenc', [App\Http\Controllers\PageController::class, 'delete'])->name('pages.deletevenc');
+
+Route::get('/{id}/edit', [App\Http\Controllers\PageController::class, 'edit'])->name('pages.edit');
+
+Route::post('/{id}', [App\Http\Controllers\PageController::class, 'update'])->name('pages.update');
+
+Route::get('maps', [App\Http\Controllers\PageController::class, 'maps'])->name('pages.maps');
+
+Route::group(['middleware' => 'auth'], function ()
 {
-    //Aqui dentro vai ficar as rotas
+    //
 });
 
 Route::group(['middleware' => 'auth'], function () {
@@ -146,37 +182,12 @@ Route::group(['middleware' => 'auth'], function () {
 
     Route::post('storecomposicao', [App\Http\Controllers\ComposicaoController::class, 'storecomposicao'])->name('pages.storecomposicao');
 
-    Route::get('/{composicao}/deletecomposicao', [App\Http\Controllers\ComposicaoController::class, 'deletec'])->name('pages.deletecomposicao');
+    Route::get('/{composicao}/deletecomposicao', [App\Http\Controllers\ComposicaoController::class, 'delete'])->name('pages.deletecomposicao');
 
     Route::get('/{id}/edit', [App\Http\Controllers\ComposicaoController::class, 'edit'])->name('pages.edit');
 
     Route::post('/{id}', [App\Http\Controllers\ComposicaoController::class, 'update'])->name('pages.update');
 
-
-
-    Route::get('conta', [App\Http\Controllers\ContaController::class, 'index'])->name('pages.conta');
-
-    Route::post('storeconta', [App\Http\Controllers\ContaController::class, 'storeconta'])->name('pages.storeconta');
-
-    Route::get('/{conta}/delete', [App\Http\Controllers\ContaController::class, 'delete'])->name('pages.delete');
-
-    Route::get('partida', [App\Http\Controllers\PartidaController::class, 'index'])->name('pages.partida');
-
-    Route::post('storepartida', [App\Http\Controllers\PartidaController::class, 'storepartida'])->name('pages.storepartida');
-
-    Route::get('/{partida}/deletepart', [App\Http\Controllers\PartidaController::class, 'delete'])->name('pages.deletepart');
-
-    Route::get('notes', [App\Http\Controllers\PageController::class, 'index'])->name('pages.show');
-
-    Route::post('store', [App\Http\Controllers\PageController::class, 'store'])->name('pages.store');
-
-    Route::get('/{vencedor}/deletevenc', [App\Http\Controllers\PageController::class, 'delete'])->name('pages.deletevenc');
-
-    Route::get('/{id}/edit', [App\Http\Controllers\PageController::class, 'edit'])->name('pages.edit');
-
-    Route::post('/{id}', [App\Http\Controllers\PageController::class, 'update'])->name('pages.update');
-
-    Route::get('maps', [App\Http\Controllers\PageController::class, 'maps'])->name('pages.maps');
 
 });
 

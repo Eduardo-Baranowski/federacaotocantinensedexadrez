@@ -21,7 +21,14 @@
                             <label for="{{ $field }}">Ano</label>
                             <input type="number" class="form-control @error($field) is-invalid @enderror"
                                    value="{{ old( $field ) }}" id="{{ $field }}" name="{{ $field }}"
-                                   placeholder="Autor">
+                                   placeholder="Ano">
+                        </div>
+                        <div class="form-group">
+                            @php( $field = 'descricao' )
+                            <label for="{{ $field }}">Descrição</label>
+                            <input type="text" class="form-control @error($field) is-invalid @enderror"
+                                   value="{{ old( $field ) }}" id="{{ $field }}" name="{{ $field }}"
+                                   placeholder="Descrição">
                         </div>
                         <div class="form-group">
                             @php( $field = 'link' )
@@ -36,9 +43,10 @@
                 </div>
             </div>
 
+            @if (Auth::user()->email == 'eduardobaranowski@gmail.com')
             <div class="container">
                 <div class="row justify-content-center">
-                    <div class="col-md-7 mr-auto">
+                    <div class="col-md-8 mr-auto">
 
                         @if (session('status'))
                             <div class="alert alert-success" role="alert">
@@ -61,6 +69,7 @@
                                 </div>
                                 <div class="card-body">
                                     <p class="card-title">{{ $composicao->ano }}</p>
+                                    <p class="card-title">{{ $composicao->descricao }}</p>
                                     <div class="card-text">{!! $composicao->link !!}</div>
                                 </div>
                             </div>
@@ -72,6 +81,14 @@
                     </div>
                 </div>
             </div>
+        @else
+            <div class="card card-body card-white">
+                <div class="card-header">
+                    <h4 class="card-title">{{ __('Para ver as composições clique no link abaixo!') }}</h4>
+                    <a href="{{ route('composicaoshow') }}">Composições</a>
+                </div>
+            </div>
+        @endif
 
     </div>
 @endsection

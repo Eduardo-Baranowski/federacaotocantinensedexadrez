@@ -72,6 +72,10 @@
                         <li class="nav-link">
                             <a href="{{ route('links') }}" class="nav-item dropdown-item">{{ __('Links') }}</a>
                         </li>
+                        <li class="dropdown-divider"></li>
+                        <li class="nav-link">
+                            <a href="{{ route('partidashow') }}" class="nav-item dropdown-item">{{ __('Partidas') }}</a>
+                        </li>
                     </ul>
                 </li>
 

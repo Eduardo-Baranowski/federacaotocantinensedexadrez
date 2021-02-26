@@ -54,6 +54,7 @@ class ComposicaoController extends Controller
         $request->validate([
             'autor' => 'required|max:255',
             'ano' => 'required|max:255',
+            'descricao' => 'required|max:255',
             'link' => 'required|max:255',
         ]);
 

@@ -17,6 +17,7 @@ class CreateComposicaosTable extends Migration
             $table->bigIncrements('id');
             $table->string('autor');
             $table->integer('ano');
+            $table->string('descricao');
             $table->string('link');
             $table->timestamps();
         });

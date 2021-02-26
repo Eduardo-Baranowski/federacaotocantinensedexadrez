@@ -41,27 +41,27 @@ class PartidaController extends Controller
         $partida->fill($request->input());
         $partida->save();
 
-        return redirect()->route('dashboard');
+        return redirect()->route('pages.partida');
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\VencedorSemana  $partida
+     * @param  \App\Partida  $partida
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
     {
         $partida = Partida::find($id);
 
-        return view('pages.edit', compact('partida'));
+        return view('pages.partida', compact('partida'));
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\VencedorSemana  $partida
+     * @param  \App\Partida  $partida
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
@@ -81,7 +81,7 @@ class PartidaController extends Controller
         $partida->fill($request->input());
         $partida->save();
 
-        return redirect()->route('pages.show');
+        return redirect()->route('pages.partida');
     }
 
     /**

@@ -40,73 +40,74 @@
 
         </div>
 
+
         <div class="container">
-            <div id="board"></div>
-            <script>
-                PGNV.pgnView('board', {pgn: '1. e4 e5 2. Nf3 Nc6 3. Bb5', pieceStyle: 'merida'});
-            </script>
             <div class="card">
                 <div class="card-header">
                     <h4 class="card-title">Últimas Partidas</h4>
                 </div>
-                @if (session('status'))
-                    <div class="alert alert-success" role="alert">
-                        {{ session('status') }}
+                <div class="row">
+
+                    <div class="col-lg-12 col-md-12 justify-content-center">
+
+                        @if (session('status'))
+                            <div class="alert alert-success" role="alert">
+                                {{ session('status') }}
+                            </div>
+                        @endif
+
+                        @forelse ($partidas as $partida)
+                            <div class="card mt-2 justify-content-center" align="center">
+                                <div class="px-4 pt-4" align="center">
+                                    <h5 align="center">
+                                        <b>Partida</b>
+                                    </h5>
+                                        <table class="table tablesorter" id="">
+                                            <thead class=" text-primary">
+                                            <tr>
+                                                <th>Brancas</th>
+                                                <th>Elo Brancas</th>
+                                                <th>Negras</th>
+                                                <th>Elo Negras</th>
+                                                <th>Evento</th>
+                                                <th>Data</th>
+                                                <th>Resultado</th>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                            <tr>
+                                                <td>{{ $partida->brancas}}</td>
+                                                <td>{{ $partida->elobrancas}}</td>
+                                                <td>{{ $partida->negras}}</td>
+                                                <td>{{ $partida->elonegras}}</td>
+                                                <td>{{ $partida->evento}}</td>
+                                                <td>{{ $partida->data}}</td>
+                                                <td>{{ $partida->resultado}}</td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                </div>
+                                <div class="card-body" align="center">
+                                    <div class="card-text">{!! $partida->link !!}</div>
+                                </div>
+                            </div>
+                        @empty
+                            <div class="alert alert-info">
+                                Não foram encontradas anotações.
+                            </div>
+                        @endforelse
                     </div>
-                @endif
-
-                @forelse ($partidas as $partida)
-
-                    <div class="card-body">
-                        <div class="table-responsive">
-                            <table class="table tablesorter" id="">
-                                <thead class=" text-primary">
-                                <tr>
-                                    <th>Brancas</th>
-                                    <th>Elo Brancas</th>
-                                    <th>Negras</th>
-                                    <th>Elo Negras</th>
-                                    <th>Evento</th>
-                                    <th>Data</th>
-                                    <th>Resultado</th>
-                                    <th>Partida</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                <tr>
-                                    <td>{{ $partida->brancas}}</td>
-                                    <td>{{ $partida->elobrancas}}</td>
-                                    <td>{{ $partida->negras}}</td>
-                                    <td>{{ $partida->elonegras}}</td>
-                                    <td>{{ $partida->evento}}</td>
-                                    <td>{{ $partida->data}}</td>
-                                    <td>{{ $partida->resultado}}</td>
-                                    <td><a href="{{$partida->link}}" target="_blank">Visualizar</a></td>
-                                </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-
-                @empty
-                    <div class="alert alert-info">
-                        Não foram encontradas anotações.
-                    </div>
-                @endforelse
-
-
+                </div>
             </div>
-            <br>
-        </div>
-    </div>
 
+        </div>
 
     <div class="container">
-        <h4>Últimos Campeões da Semana</h4>
-
 
         <div class="card">
-
+            <div class="card-header">
+                <h4 class="card-title">Últimos Campeões da Semana</h4>
+            </div>
             @if (session('status'))
                 <div class="alert alert-success" role="alert">
                     {{ session('status') }}
@@ -152,7 +153,34 @@
         </div>
     </div>
 
-    </div>
+
+        <div class="container justify-content-center" align="center">
+
+
+            <div class="card">
+                <div class="card-header">
+                    <h4 class="card-title">Resolução de Problemas</h4>
+                </div>
+                    <div class="card-body ">
+                        <div class="card card-user">
+
+                                <div class="card mt-2 justify-content-center" align="center">
+                                    <div id="puzzle" align="center" class="justify-content-center">
+                                        <div id="puzzle-container" align="center" class="align-items-center">
+                                            <link id="puzzleCss" type="text/css" rel="stylesheet" href="https://chesstempo.com/css/dailypuzzle.css"/>
+                                            <script type="text/javascript" src="https://chesstempo.com/js/dailypuzzle.js"></script>
+                                            <script>
+                                                new Puzzle({ pieceSize: 29});
+                                            </script>
+                                        </div>
+                                        <a id="ct-link" href="https://chesstempo.com/play-chess-online/" class="disabled">Xadrez Online</a>
+                                    </div>
+                                </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+        </div>
 @endsection
 
 @push('js')

@@ -1,4 +1,4 @@
-@extends('layouts.app', ['page' => __('Cadastro de Partida'), 'pageSlug' => 'partida'])
+@extends('layouts.app', ['pageSlug' => 'partida'])
 
 @section('content')
     <div class="row">
@@ -79,7 +79,7 @@
         </div>
 
 
-        @if (Auth::user()->name == 'Eduardo Baranowski')
+        @if (Auth::user()->email == 'eduardobaranowski@gmail.com')
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-md-7 mr-auto">
