@@ -155,17 +155,13 @@ Route::post('storeconta', [App\Http\Controllers\ContaController::class, 'storeco
 Route::get('/{conta}/delete', [App\Http\Controllers\ContaController::class, 'delete'])->name('pages.delete');
 
 
-
-
-
-
 Route::get('notes', [App\Http\Controllers\PageController::class, 'index'])->name('pages.show');
 
 Route::post('store', [App\Http\Controllers\PageController::class, 'store'])->name('pages.store');
 
 Route::get('/{vencedor}/deletevenc', [App\Http\Controllers\PageController::class, 'delete'])->name('pages.deletevenc');
 
-Route::get('/{id}/edit', [App\Http\Controllers\PageController::class, 'edit'])->name('pages.edit');
+Route::get('/{id}/editvencedor', [App\Http\Controllers\PageController::class, 'edit'])->name('pages.editvencedor');
 
 Route::post('/{id}', [App\Http\Controllers\PageController::class, 'update'])->name('pages.update');
 
@@ -186,7 +182,7 @@ Route::group(['middleware' => 'auth'], function () {
 
     Route::get('/{id}/edit', [App\Http\Controllers\ComposicaoController::class, 'edit'])->name('pages.edit');
 
-    Route::post('/{id}', [App\Http\Controllers\ComposicaoController::class, 'update'])->name('pages.update');
+    //Route::post('/{id}', [App\Http\Controllers\ComposicaoController::class, 'update'])->name('pages.update');
 
 
 });

@@ -49,18 +49,40 @@
                 </div>
             </li>
 
-            <li @if ($pageSlug ?? '' == 'partida') class="active " @endif>
-                <a href="{{ route('pages.partida')  }}">
-                    <i class="tim-icons icon-puzzle-10"></i>
-                    <p>{{ __('Cadastro de Partida') }}</p>
-                </a>
-            </li>
 
-            <li @if ($pageSlug ?? '' == 'composicao') class="active " @endif>
-                <a href="{{ route('pages.composicao')  }}">
-                    <i class="tim-icons icon-puzzle-10"></i>
-                    <p>{{ __('Cadastro de Composição') }}</p>
+            <li>
+                <a data-toggle="collapse" href="#laravel-examples1" aria-expanded="true">
+                    <i class="tim-icons icon-puzzle-10" ></i>
+                    <span class="nav-link-text" >{{ __('Registros') }}</span>
+                    <b class="caret mt-1"></b>
                 </a>
+
+                <div class="collapse" id="laravel-examples1">
+                    <ul class="nav pl-4">
+
+
+                        <li @if ($pageSlug ?? '' == 'partida') class="active " @endif>
+                            <a href="{{ route('pages.partida')  }}">
+                                <i class="tim-icons icon-puzzle-10"></i>
+                                <p>{{ __('Cadastro de Partida') }}</p>
+                            </a>
+                        </li>
+
+                        <li @if ($pageSlug ?? '' == 'composicao') class="active " @endif>
+                            <a href="{{ route('pages.composicao')  }}">
+                                <i class="tim-icons icon-puzzle-10"></i>
+                                <p>{{ __('Cadastro de Composição') }}</p>
+                            </a>
+                        </li>
+
+                        <li @if ($pageSlug ?? '' == 'show') class="active " @endif>
+                            <a href="{{ route('pages.show')  }}">
+                                <i class="tim-icons icon-puzzle-10"></i>
+                                <p>{{ __('Cadastro de Campeão') }}</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </li>
 
             <li @if ($pageSlug ?? '' == 'links') class="active " @endif>

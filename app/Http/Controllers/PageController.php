@@ -80,7 +80,7 @@ class PageController extends Controller
     {
         $vencedor = VencedorSemana::find($id);
 
-        return view('pages.edit', compact('vencedor'));
+        return view('pages.editvencedor', compact('vencedor'));
     }
 
     /**
@@ -101,6 +101,20 @@ class PageController extends Controller
         $vencedor = VencedorSemana::find($id);
         $vencedor->fill($request->input());
         $vencedor->save();
+
+        if ($request->file('imagem') && $request->file('imagem')->isValid()) {
+            // Define um aleatório para o arquivo baseado no timestamps atual
+            $name = uniqid(date('HisYmd'));
+            // Recupera a extensão do arquivo
+            $extension = $request->file('imagem')->extension();
+            // Define o nome
+            $nameFile = "{$name}.{$extension}";
+            // Faz o upload:
+            $upload = $request->file('imagem')->storeAs('imagem', $nameFile);
+            //Armazena o caminho onde a imagem está
+            $vencedor->imagem = $upload;
+            $vencedor->save();
+        }
 
         return redirect()->route('pages.show');
     }

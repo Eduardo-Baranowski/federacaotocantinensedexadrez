@@ -64,7 +64,7 @@
                                 <b>{{ $vencedor->titulo}}</b>
                             </h5>
                             <div class="float-right">
-                                <a href="{{ route('pages.edit', $vencedor->id ) }}"
+                                <a href="{{ route('pages.editvencedor', $vencedor->id ) }}"
                                    class="btn btn-sm btn-outline-primary">Editar</a>
                                 <a href="{{ route('pages.deletevenc', $vencedor->id ) }}"
                                    class="btn btn-sm btn-outline-danger">Deletar</a>

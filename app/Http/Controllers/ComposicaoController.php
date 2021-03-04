@@ -49,7 +49,7 @@ class ComposicaoController extends Controller
      * @param  \App\Composicao  $composicao
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function updatev(Request $request, $id)
     {
         $request->validate([
             'autor' => 'required|max:255',
