@@ -9,7 +9,7 @@
                     <div class="card-header">
                         <h4 class="card-title">{{ __('Registro de Gasto') }}</h4>
                     </div>
-                    <form action="{{ route('pages.storeconta') }}" method="POST">
+                    <form action="{{ route('conta.storeconta') }}" method="POST">
                         @csrf
                         <div class="form-group">
                             @php( $field = 'titulo' )
@@ -62,9 +62,9 @@
                                         <b>{{ $conta->titulo}}</b>
                                     </h5>
                                     <div class="float-right">
-                                        <a href="{{ route('pages.edit', $conta->id ) }}"
+                                        <a href="{{ route('conta.editconta', $conta->id ) }}"
                                            class="btn btn-sm btn-outline-primary">Editar</a>
-                                        <a href="{{ route('pages.delete', $conta->id ) }}"
+                                        <a href="{{ route('conta.delete', $conta->id ) }}"
                                            class="btn btn-sm btn-outline-danger">Deletar</a>
                                     </div>
                                 </div>
@@ -88,7 +88,7 @@
                     <div class="card-header">
                         <h4 class="card-title">{{ __('Registro de Gasto') }}</h4>
                     </div>
-                    <form action="{{ route('pages.storeconta') }}" method="POST">
+                    <form action="{{ route('conta.storeconta') }}" method="POST">
                         @csrf
                         <div class="form-group">
                             @php( $field = 'titulo' )
@@ -141,9 +141,9 @@
                                         <b>{{ $conta->titulo}}</b>
                                     </h5>
                                     <div class="float-right">
-                                        <a href="{{ route('pages.edit', $conta->id ) }}"
+                                        <a href="{{ route('conta.editconta', $conta->id ) }}"
                                            class="btn btn-sm btn-outline-primary">Editar</a>
-                                        <a href="{{ route('pages.delete', $conta->id ) }}"
+                                        <a href="{{ route('conta.delete', $conta->id ) }}"
                                            class="btn btn-sm btn-outline-danger">Deletar</a>
                                     </div>
                                 </div>

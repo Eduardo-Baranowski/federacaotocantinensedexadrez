@@ -11,7 +11,7 @@
                 <div class="card-header">
                     <h4 class="card-title">{{ __('Registro de Campeão') }}</h4>
                 </div>
-                    <form action="{{ route('pages.store') }}" method="POST" enctype="multipart/form-data">
+                    <form action="{{ route('vencedor.store') }}" method="POST" enctype="multipart/form-data">
                         @csrf
                         <div class="form-group">
                             @php( $field = 'titulo' )
@@ -64,9 +64,9 @@
                                 <b>{{ $vencedor->titulo}}</b>
                             </h5>
                             <div class="float-right">
-                                <a href="{{ route('pages.editvencedor', $vencedor->id ) }}"
+                                <a href="{{ route('vencedor.editvencedor', $vencedor->id ) }}"
                                    class="btn btn-sm btn-outline-primary">Editar</a>
-                                <a href="{{ route('pages.deletevenc', $vencedor->id ) }}"
+                                <a href="{{ route('vencedor.deletevenc', $vencedor->id ) }}"
                                    class="btn btn-sm btn-outline-danger">Deletar</a>
                             </div>
                         </div>

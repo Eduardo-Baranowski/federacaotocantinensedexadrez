@@ -9,17 +9,6 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\ComposicaoController;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
-
 Route::get('/', function () {
     return view('welcome');
 });
@@ -128,63 +117,41 @@ Route::get('/partidashow', function () {
 })->name('partidashow');;
 
 Route::get('contact', [ContactController::class, 'index'])->name('contact');
-
 Route::post('send', [ContactController::class, 'send'])->name('contact.send');
-
 Route::get('/download', [ContactController::class, 'getDownload'])->name('download');
-
 Route::get('/view', [ContactController::class, 'viewEstatuto'])->name('view');
 
 Auth::routes();
 
-
-
-Auth::routes();
-
 Route::get('partida', [App\Http\Controllers\PartidaController::class, 'index'])->name('pages.partida');
-
 Route::post('storepartida', [App\Http\Controllers\PartidaController::class, 'storepartida'])->name('pages.storepartida');
-
 Route::get('/{partida}/deletepart', [App\Http\Controllers\PartidaController::class, 'delete'])->name('pages.deletepart');
 
+Route::get('conta', [App\Http\Controllers\ContaController::class, 'index'])->name('conta.conta');
+Route::get('/{conta}/delete', [App\Http\Controllers\ContaController::class, 'delete'])->name('conta.delete');
+Route::get('/{id}/editconta', [App\Http\Controllers\ContaController::class, 'edit'])->name('conta.editconta');
 
-Route::get('conta', [App\Http\Controllers\ContaController::class, 'index'])->name('pages.conta');
+Route::get('notes', [App\Http\Controllers\PageController::class, 'index'])->name('vencedor.show');
+Route::get('/{vencedor}/deletevenc', [App\Http\Controllers\PageController::class, 'delete'])->name('vencedor.deletevenc');
+Route::get('/{id}/editvencedor', [App\Http\Controllers\PageController::class, 'edit'])->name('vencedor.editvencedor');
+Route::get('maps', [App\Http\Controllers\PageController::class, 'maps'])->name('vencedor.maps');
 
-Route::post('storeconta', [App\Http\Controllers\ContaController::class, 'storeconta'])->name('pages.storeconta');
+Route::group(['prefix' => 'vencedor', 'middleware' => 'auth'], function () {
+    Route::post('store', [App\Http\Controllers\PageController::class, 'store'])->name('vencedor.store');
+    Route::post('/{composicao}', [App\Http\Controllers\PageController::class, 'updatev'])->name('vencedor.updatev');
+});
 
-Route::get('/{conta}/delete', [App\Http\Controllers\ContaController::class, 'delete'])->name('pages.delete');
-
-
-Route::get('notes', [App\Http\Controllers\PageController::class, 'index'])->name('pages.show');
-
-Route::post('store', [App\Http\Controllers\PageController::class, 'store'])->name('pages.store');
-
-Route::get('/{vencedor}/deletevenc', [App\Http\Controllers\PageController::class, 'delete'])->name('pages.deletevenc');
-
-Route::get('/{id}/editvencedor', [App\Http\Controllers\PageController::class, 'edit'])->name('pages.editvencedor');
-
-Route::post('/{id}', [App\Http\Controllers\PageController::class, 'update'])->name('pages.update');
-
-Route::get('maps', [App\Http\Controllers\PageController::class, 'maps'])->name('pages.maps');
-
-Route::group(['middleware' => 'auth'], function ()
-{
-    //
+Route::group(['prefix' => 'conta', 'middleware' => 'auth'], function () {
+    Route::post('storeconta', [App\Http\Controllers\ContaController::class, 'storeconta'])->name('conta.storeconta');
+    Route::post('/{conta}', [App\Http\Controllers\ContaController::class, 'updatec'])->name('conta.updatec');
 });
 
 Route::group(['middleware' => 'auth'], function () {
-
     Route::get('composicao', [App\Http\Controllers\ComposicaoController::class, 'index'])->name('pages.composicao');
-
     Route::post('storecomposicao', [App\Http\Controllers\ComposicaoController::class, 'storecomposicao'])->name('pages.storecomposicao');
-
     Route::get('/{composicao}/deletecomposicao', [App\Http\Controllers\ComposicaoController::class, 'delete'])->name('pages.deletecomposicao');
-
     Route::get('/{id}/edit', [App\Http\Controllers\ComposicaoController::class, 'edit'])->name('pages.edit');
-
-    //Route::post('/{id}', [App\Http\Controllers\ComposicaoController::class, 'update'])->name('pages.update');
-
-
+    Route::post('/{id}', [App\Http\Controllers\ComposicaoController::class, 'update'])->name('pages.update');
 });
 
 Route::group(['middleware' => 'auth'], function () {

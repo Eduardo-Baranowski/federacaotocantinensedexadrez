@@ -53,8 +53,8 @@ class RegisterController extends Controller
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
-            'nickchess' => ['nullable', 'string', 'max:255'],
-            'nicklichess' => ['nullable', 'string', 'max:255'],
+            'nickchess' => ['required', 'string', 'max:255'],
+            'nicklichess' => ['required', 'string', 'max:255'],
             'rattingchess' => ['nullable'],
             'rattingchessbullet' => ['nullable'],
             'rattingchessrapido' => ['nullable'],
@@ -90,5 +90,13 @@ class RegisterController extends Controller
             'rattinglichessrapido' => $data['rattinglichessrapido'],
             'rattinglichesspensado' => $data['rattinglichesspensado'],
         ]);
+    }
+
+    public function messages()
+    {
+        return [
+            'nickchess.required' => 'O nick no chess.com é necessário!',
+            'nicklichess.required' => 'O nick no Lichess é necessário!',
+        ];
     }
 }

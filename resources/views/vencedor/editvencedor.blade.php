@@ -14,7 +14,7 @@
 
                 <div class="card">
                     <div class="card-body">
-                        <form action="{{ route('pages.update', $vencedor->id) }}" method="POST"
+                        <form action="{{ route('vencedor.updatev', $vencedor->id) }}" method="POST"
                               enctype="multipart/form-data">
                             {{ csrf_field() }}
                             <div class="form-group">
@@ -46,7 +46,7 @@
                                        accept=".png,.jpeg,.gif,.svg,.bitmap" placeholder="Imagem" required>
                             </div>
 
-                            <a href="{{route('pages.show')}}" class="btn btn-sm btn-outline-primary">Cancelar</a>
+                            <a href="{{route('vencedor.show')}}" class="btn btn-sm btn-outline-primary">Cancelar</a>
                             <input type="submit" class="btn btn-sm btn-outline-success" value="Salvar">
                         </form>
                     </div>

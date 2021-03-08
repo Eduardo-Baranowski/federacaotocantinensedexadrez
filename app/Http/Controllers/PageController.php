@@ -20,7 +20,7 @@ class PageController extends Controller
     public function index()
     {
         $vencedor_semanas = VencedorSemana::all();
-        return view('pages.show', compact('vencedor_semanas'));
+        return view('vencedor.show', compact('vencedor_semanas'));
     }
 
     public function store(Request $request)
@@ -52,12 +52,12 @@ class PageController extends Controller
             $vencedor->save();
         }
 
-        return redirect()->route('pages.show');
+        return redirect()->route('vencedor.show');
     }
 
     public function icons()
     {
-        return view('pages.icons');
+        return view('vencedor.icons');
     }
 
     /**
@@ -80,7 +80,7 @@ class PageController extends Controller
     {
         $vencedor = VencedorSemana::find($id);
 
-        return view('pages.editvencedor', compact('vencedor'));
+        return view('vencedor.editvencedor', compact('vencedor'));
     }
 
     /**
@@ -90,7 +90,7 @@ class PageController extends Controller
      * @param  \App\VencedorSemana  $vencedor
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function updatev(Request $request, $id)
     {
         $request->validate([
             'titulo' => 'required|max:255',
@@ -116,7 +116,7 @@ class PageController extends Controller
             $vencedor->save();
         }
 
-        return redirect()->route('pages.show');
+        return redirect()->route('vencedor.show');
     }
 
     /**
@@ -131,6 +131,6 @@ class PageController extends Controller
         $vencedor->delete();
 
 
-        return redirect()->route('pages.show');
+        return redirect()->route('vencedor.show');
     }
 }

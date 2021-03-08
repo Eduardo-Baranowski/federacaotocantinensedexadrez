@@ -11,7 +11,7 @@
                     <p>{{ __('Informações e Eventos') }}</p>
                 </a>
             </li>
-            <li>
+            <li @if ($pageSlug ?? '' == 'sobre') class="active " @endif>
                 <a data-toggle="collapse" href="#laravel-examples" aria-expanded="true">
                     <i class="tim-icons icon-badge" ></i>
                     <span class="nav-link-text" >{{ __('Sobre a FTX') }}</span>
@@ -50,7 +50,7 @@
             </li>
 
 
-            <li>
+            <li @if ($pageSlug ?? '' == 'registro') class="active " @endif>
                 <a data-toggle="collapse" href="#laravel-examples1" aria-expanded="true">
                     <i class="tim-icons icon-puzzle-10" ></i>
                     <span class="nav-link-text" >{{ __('Registros') }}</span>
@@ -76,7 +76,7 @@
                         </li>
 
                         <li @if ($pageSlug ?? '' == 'show') class="active " @endif>
-                            <a href="{{ route('pages.show')  }}">
+                            <a href="{{ route('vencedor.show')  }}">
                                 <i class="tim-icons icon-puzzle-10"></i>
                                 <p>{{ __('Cadastro de Campeão') }}</p>
                             </a>
@@ -97,7 +97,7 @@
                     <p>{{ __('Calendário') }}</p>
                 </a>
             </li>
-            <li>
+            <li @if ($pageSlug ?? '' == 'transparencia') class="active " @endif>
                 <a data-toggle="collapse" href="#transparencia" aria-expanded="true">
                     <i class="tim-icons icon-bank" ></i>
                     <span class="nav-link-text" >{{ __('Transparência') }}</span>
@@ -108,7 +108,7 @@
                     <ul class="nav pl-4">
 
                         <li @if ($pageSlug ?? '' == 'conta') class="active " @endif>
-                            <a href="{{ route('pages.conta')  }}">
+                            <a href="{{ route('conta.conta')  }}">
                                 <i class="tim-icons icon-money-coins"></i>
                                 <p>{{ __('Cadastro de Gasto') }}</p>
                             </a>
@@ -130,7 +130,7 @@
             </li>
 
             <li @if ($pageSlug ?? '' == 'maps') class="active " @endif>
-                <a href="{{ route('pages.maps') }}">
+                <a href="{{ route('vencedor.maps') }}">
                     <i class="tim-icons icon-pin"></i>
                     <p>{{ __('Localização') }}</p>
                 </a>

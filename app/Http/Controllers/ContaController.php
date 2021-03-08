@@ -19,7 +19,7 @@ class ContaController extends Controller
     public function index()
     {
         $contas = Conta::all();
-        return view('pages.conta', compact('contas'));
+        return view('conta.conta', compact('contas'));
     }
 
     public function storeconta(Request $request)
@@ -49,7 +49,7 @@ class ContaController extends Controller
     {
         $conta = Conta::find($id);
 
-        return view('pages.edit', compact('conta'));
+        return view('conta.editconta', compact('conta'));
     }
 
     /**
@@ -59,19 +59,20 @@ class ContaController extends Controller
      * @param  \App\Conta  $conta
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function updatec(Request $request, $id)
     {
         $request->validate([
             'titulo' => 'required|max:255',
             'descricao' => 'required|max:255',
-            'valor' => 'required',
+            'valor' => ['required','regex:/^\d+([.]\d{1,2})?$/'],
+            'data' => 'required|max:255',
         ]);
 
         $conta = Conta::find($id);
         $conta->fill($request->input());
         $conta->save();
 
-        return redirect()->route('pages.conta');
+        return redirect()->route('conta.conta');
     }
 
     /**
@@ -84,6 +85,6 @@ class ContaController extends Controller
 
         $conta->delete();
 
-        return redirect()->route('pages.conta');
+        return redirect()->route('conta.conta');
     }
 }
